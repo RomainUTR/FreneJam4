@@ -56,6 +56,9 @@ MonoBehaviour:
   ExplosionSound: {fileID: 11400000, guid: cecbfeb8eb29cff4bb9822aafcbd6edb, type: 2}
   FX_OnHit: {fileID: 3773410661760029208, guid: 04460ba7d68ee4163bb72e14afc5150a, type: 3}
   FX_OnPlayerHit: {fileID: 3773410661760029208, guid: 1afbbcce24aef424f84de2755a6f7627, type: 3}
+  EnemyTakeDamage: {fileID: 11400000, guid: 7626776811bd541079c241992545635b, type: 2}
+  projectileStats: {fileID: 11400000, guid: 7b172af91c0f4844fa566cc34e68abdd, type: 2}
+  playerSettings: {fileID: 11400000, guid: ea976804a0f268b40b59205b9b88d674, type: 2}
   PlayerTarget: {fileID: 0}
 --- !u!114 &8887282523099157180
 MonoBehaviour:
@@ -69,10 +72,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b527acb8ea46548ecb333f5e67683b7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  projectileStatsSO: {fileID: 11400000, guid: 7b172af91c0f4844fa566cc34e68abdd, type: 2}
   enemySO: {fileID: 11400000, guid: e45bda1eaba5c437ea08ceeaff1ba8f4, type: 2}
   EnemyTakeDamage: {fileID: 11400000, guid: 7626776811bd541079c241992545635b, type: 2}
   HPText: {fileID: 506616078760310524}
+  OnEnemyKilled: {fileID: 11400000, guid: 9f3d7756659df4c569a873acd89f4224, type: 2}
 --- !u!33 &5111014517281582799
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -186,7 +189,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: -0.25}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7223529076830792637
@@ -270,7 +273,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 300
+  m_text: 5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -297,8 +300,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

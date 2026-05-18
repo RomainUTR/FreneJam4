@@ -15,8 +15,9 @@ MonoBehaviour:
   walkSpeed: 6
   runSpeed: 10
   smoothMoveTime: 0.1
-  fireRate: 3
-  maxHealth: 5
+  fireRate: 2
+  damage: 5
+  maxHealth: 7
   gravity: 18
   lockCursor: 0
   mouseSensitivity: 0.5

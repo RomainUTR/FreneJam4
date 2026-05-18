@@ -17,6 +17,16 @@ public class Enemy : MonoBehaviour
 
     public Transform PlayerTarget;
 
+    private void OnEnable()
+    {
+        OnEnemyKilled.OnEventRaised += DestroyEnemyWhenKO;
+    }
+
+    private void OnDisable()
+    {
+        OnEnemyKilled.OnEventRaised -= DestroyEnemyWhenKO;
+    }
+
     private void Start()
     {
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
@@ -40,21 +50,21 @@ public class Enemy : MonoBehaviour
     {
         if(other.CompareTag("Projectile"))
         {
-            //other.GetComponent<Projectile>().EnemyKilledCount++;
-            //AudioManager.Instance.PlayClipAt(ExplosionSound, other.transform.position);
-            //Destroy(gameObject);
-            //Instantiate(FX_OnHit, transform.position, Quaternion.identity);
-            //OnEnemyKilled?.RaiseEvent();
+            Instantiate(FX_OnHit, transform.position, Quaternion.identity);
 
-            EnemyTakeDamage.RaiseEvent(projectileStats.damage);
+            EnemyTakeDamage.RaiseEvent(this.gameObject, projectileStats.damage);
         } else if (other.CompareTag("Player"))
         {
-            //Destroy(gameObject);
-            //AudioManager.Instance.PlayClipAt(ExplosionSound, other.transform.position);
-            //Instantiate(FX_OnPlayerHit, other.transform.position, Quaternion.identity);
-            //OnDamakeTaken.RaiseEvent(Settings.BaseDamage);
+            Instantiate(FX_OnPlayerHit, other.transform.position, Quaternion.identity);
 
-            EnemyTakeDamage?.RaiseEvent(playerSettings.damage);
+            EnemyTakeDamage.RaiseEvent(this.gameObject, projectileStats.damage);
         }
+    }
+
+    void DestroyEnemyWhenKO(GameObject gameObject)
+    {
+        if (gameObject != this.gameObject) return;
+
+        Destroy(gameObject);
     }
 }

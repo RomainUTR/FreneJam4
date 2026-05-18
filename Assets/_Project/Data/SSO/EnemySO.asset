@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01129deaf46a34625987ee878fe5ff93, type: 3}
   m_Name: EnemySO
   m_EditorClassIdentifier: Assembly-CSharp::EnemySO
-  Damage: 1
-  SpawnRate: 1.5
+  BaseDamage: 1
+  BaseHealth: 5
+  SpawnRate: 5
   SpawnRadius: 10

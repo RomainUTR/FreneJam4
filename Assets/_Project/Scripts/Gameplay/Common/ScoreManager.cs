@@ -22,7 +22,7 @@ public class ScoreManager : MonoBehaviour
         UpdateUI();
     }
 
-    void AddScore()
+    void AddScore(GameObject GO)
     {
         Score.RuntimeValue += 1;
         UpdateUI();

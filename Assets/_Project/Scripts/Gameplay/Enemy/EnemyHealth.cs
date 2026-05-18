@@ -4,7 +4,6 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [Header("Settings")]
-    public ProjectileStatsSO projectileStatsSO;
     public EnemySO enemySO;
 
     //[Header("References")]
@@ -15,6 +14,7 @@ public class EnemyHealth : MonoBehaviour
 
     [Header("Output")]
     private float _currentHealth;
+    public RSE_OnEnemyKilled OnEnemyKilled;
 
     void Awake()
     {
@@ -32,14 +32,16 @@ public class EnemyHealth : MonoBehaviour
         EnemyTakeDamage.OnEventRaised -= TakeDamage;
     }
 
-    void TakeDamage(float amount)
+    void TakeDamage(GameObject GO, float amount)
     {
-        _currentHealth -= projectileStatsSO.damage;
+        if (GO != this.gameObject) return;
+
+        _currentHealth -= amount;
         HPText.text = _currentHealth.ToString();
 
         if (_currentHealth <= 0f)
         {
-            Debug.Log($"Enemy {this.gameObject.name} is dead");
+            OnEnemyKilled.RaiseEvent(GO);
         }
     }
 }

@@ -1,16 +1,14 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "RSE_OnEnemyKilled", menuName = "Scriptable Objects/RSE_OnEnemyKilled")]
 public class RSE_OnEnemyKilled : ScriptableObject
 {
-    public event UnityAction OnEventRaised;
+    public event Action<GameObject> OnEventRaised;
 
-    public void RaiseEvent()
+    public void RaiseEvent(GameObject GO)
     {
-        if (OnEventRaised != null)
-        {
-            OnEventRaised.Invoke();
-        }
+        OnEventRaised.Invoke(GO);
     }
 }
