@@ -17,6 +17,7 @@ public class PlayerSettingsSO : ScriptableObject
     [BoxGroup("Combat Settings")]
     [SuffixLabel("sec", true)]
     public float fireRate = 2f;
+    public float damage = 1f;
     public int maxHealth = 50;
 
     [BoxGroup("Physics Settings")]

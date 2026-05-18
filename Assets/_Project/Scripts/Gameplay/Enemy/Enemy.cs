@@ -11,6 +11,9 @@ public class Enemy : MonoBehaviour
     [Required, InlineEditor] public SoundData ExplosionSound;
 
     public GameObject FX_OnHit, FX_OnPlayerHit;
+    public RSE_EnemyTakeDamage EnemyTakeDamage;
+    public ProjectileStatsSO projectileStats;
+    public PlayerSettingsSO playerSettings;
 
     public Transform PlayerTarget;
 
@@ -37,17 +40,21 @@ public class Enemy : MonoBehaviour
     {
         if(other.CompareTag("Projectile"))
         {
-            other.GetComponent<Projectile>().EnemyKilledCount++;
+            //other.GetComponent<Projectile>().EnemyKilledCount++;
             //AudioManager.Instance.PlayClipAt(ExplosionSound, other.transform.position);
-            Destroy(gameObject);
-            Instantiate(FX_OnHit, transform.position, Quaternion.identity);
-            OnEnemyKilled?.RaiseEvent();
+            //Destroy(gameObject);
+            //Instantiate(FX_OnHit, transform.position, Quaternion.identity);
+            //OnEnemyKilled?.RaiseEvent();
+
+            EnemyTakeDamage.RaiseEvent(projectileStats.damage);
         } else if (other.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
             //AudioManager.Instance.PlayClipAt(ExplosionSound, other.transform.position);
-            Instantiate(FX_OnPlayerHit, other.transform.position, Quaternion.identity);
-            OnDamakeTaken.RaiseEvent(Settings.BaseDamage);
+            //Instantiate(FX_OnPlayerHit, other.transform.position, Quaternion.identity);
+            //OnDamakeTaken.RaiseEvent(Settings.BaseDamage);
+
+            EnemyTakeDamage?.RaiseEvent(playerSettings.damage);
         }
     }
 }

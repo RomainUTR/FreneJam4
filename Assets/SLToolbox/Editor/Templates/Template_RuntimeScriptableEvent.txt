@@ -1,12 +1,12 @@
 using UnityEngine;
-using UnityEngine.Events;
+using System;
 
 [CreateAssetMenu(fileName = "#CLASSNAME#", menuName = "Events/#CLASSNAME#")]
 public class #CLASSNAME# : ScriptableObject
 {
-    public event UnityAction OnEventRaised;
+    public event Action OnEventRaised;
 
-    public void Raise()
+    public void RaiseEvent()
     {
         OnEventRaised?.Invoke();
     }

@@ -1,39 +1,39 @@
 - Projectiles : 
-	- peuvent être tirés par le joueur
-	- peuvent être tirés par les ennemis
-	- peuvent être tirés par les boss
-	- peuvent faire du dégât à ceux qui les touchent
-	- se détruisent après avoir touché une cible, x fois un mur ou après un certain temps
-	- considérer de leurs donner une barre de vie pour la lisibilité du joueur (ex : 3 points de vie pour les projectiles du joueur, 1 point de vie pour les projectiles des ennemis)
+	- peuvent Ãªtre tirÃ©s par le joueur
+	- peuvent Ãªtre tirÃ©s par les ennemis
+	- peuvent Ãªtre tirÃ©s par les boss
+	- peuvent faire du dÃ©gÃ¢t Ã  ceux qui les touchent
+	- se dÃ©truisent aprÃ¨s avoir touchÃ© une cible, x fois un mur ou aprÃ¨s un certain temps
+	- considÃ©rer de leurs donner une barre de vie pour la lisibilitÃ© du joueur (ex : 3 points de vie pour les projectiles du joueur, 1 point de vie pour les projectiles des ennemis)
 
 - 1 bloc de spawn :
-	- peut faire spawner 1 ennemi à la fois
+	- peut faire spawner 1 ennemi Ã  la fois
 	- peut faire spawner 1 boss
 	- peut faire spawner un bonus
 
 - les ennemis :
 	- ont une barre de vie
-	- peuvent être tués
-	- peuvent faire du dégât au joueur
-	- améliorer l'ia
+	- peuvent Ãªtre tuÃ©s
+	- peuvent faire du dÃ©gÃ¢t au joueur
+	- amÃ©liorer l'ia
 
 - les boss :
 	- ont une barre de vie plus grande que les ennemis
-	- peuvent être tués
-	- peuvent faire plus de dégât au joueur que les ennemis
-	- hérite du l'ia des ennemis
+	- peuvent Ãªtre tuÃ©s
+	- peuvent faire plus de dÃ©gÃ¢t au joueur que les ennemis
+	- hÃ©rite du l'ia des ennemis
 
 - random input :
-	- a des moments clés, les inputs du joueur changent (avant un boss par exemple)
-	- strictement limité à l'inversion des inputs
-	- doit être annoncé au joueur avant que les inputs ne soient inversés (ex : "les controls sont inversés !") et préciser les inputs concernés
+	- a des moments clÃ©s, les inputs du joueur changent (avant un boss par exemple)
+	- strictement limitÃ© Ã  l'inversion des inputs
+	- doit Ãªtre annoncÃ© au joueur avant que les inputs ne soient inversï¿½s (ex : "les controls sont inversÃ©s !") et prÃ©ciser les inputs concernÃ©s
 
 - the game hates you :
-	- le jeu est conçu pour être difficile
-	- le jeu décide à des moments aléatoires de faire des choses pour rendre le jeu plus difficile pour le joueur
-	- le jeu peut agir sur les réglages des inputs (vitesse de déplacement, vitesse de tir, etc.)
+	- le jeu est conÃ§u pour Ãªtre difficile
+	- le jeu dÃ©cide Ã  des moments alÃ©atoires de faire des choses pour rendre le jeu plus difficile pour le joueur
+	- le jeu peut agir sur les rÃ©glages des inputs (vitesse de dÃ©placement, vitesse de tir, etc.)
 
 - bonus :
-	- peut être ramassé par le joueur
-	- peut donner des avantages temporaires au joueur (ex : invincibilité, tir plus rapide, armure, regen, transpercer les ennemis, etc..)
-	- peut être détruit par les ennemis ou les boss
+	- peut Ãªtre ramassÃ© par le joueur
+	- peut donner des avantages temporaires au joueur (ex : invincibilitÃ©, tir plus rapide, armure, regen, transpercer les ennemis, etc..)
+	- peut Ãªtre dÃ©truit par les ennemis ou les boss
