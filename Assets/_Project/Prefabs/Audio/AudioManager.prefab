@@ -44,10 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7f86a00892eca24aa96c0309af159e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlaySFXSound: {fileID: 11400000, guid: 7176d16f71a6e844aa780ab38cfd9adb, type: 2}
-  PlayUISound: {fileID: 11400000, guid: b0372a35497d98048b5f8a40567cb930, type: 2}
-  MusicChange: {fileID: 11400000, guid: 91fc88573fd31b740b558e73359681f7, type: 2}
-  MusicStop: {fileID: 11400000, guid: 7b52256e75f65a44da0576fb899c3c7b, type: 2}
   startingAudioObjectsCount: 40
   transitionFadeOutDelay: 0
   transitionFadeInDelay: 0

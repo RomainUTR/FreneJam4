@@ -14,8 +14,10 @@ public class PlayerSettingsSO : ScriptableObject
     [Tooltip("Temps pour atteindre la vitesse cible (inertie)")]
     public float smoothMoveTime = 0.1f;
 
-    [BoxGroup("Physics Settings")]
-    public float jumpForce = 8;
+    [BoxGroup("Combat Settings")]
+    [SuffixLabel("sec", true)]
+    public float fireRate = 2f;
+    public int maxHealth = 50;
 
     [BoxGroup("Physics Settings")]
     public float gravity = 18;

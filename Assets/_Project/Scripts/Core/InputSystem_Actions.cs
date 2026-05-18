@@ -836,6 +836,15 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""Shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""cc971522-ea64-47c3-b786-1d84e756d298"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Sprint"",
                     ""type"": ""Button"",
                     ""id"": ""27d0b336-4233-4764-9c9b-bf4c765da8a5"",
@@ -1079,6 +1088,39 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""94124408-1f84-4120-82ca-1b5828943139"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1d0f93fc-a3d2-4e4e-a5b5-a708db236d1a"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e2ba5440-9e48-4c38-873b-7b3de0eb98d9"",
+                    ""path"": ""<XRController>/secondaryButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""XR"",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""473d8c5b-2753-4187-bc5f-8394c2a0a47e"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
@@ -1091,7 +1133,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""39c9d36c-87ba-4307-b36d-81874ed99b81"",
-                    ""path"": ""<Pointer>/delta"",
+                    ""path"": ""<Mouse>/position"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse;Touch"",
@@ -1198,6 +1240,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Controller_Interact = m_Controller.FindAction("Interact", throwIfNotFound: true);
         m_Controller_Look = m_Controller.FindAction("Look", throwIfNotFound: true);
         m_Controller_Jump = m_Controller.FindAction("Jump", throwIfNotFound: true);
+        m_Controller_Shoot = m_Controller.FindAction("Shoot", throwIfNotFound: true);
         m_Controller_Sprint = m_Controller.FindAction("Sprint", throwIfNotFound: true);
     }
 
@@ -1587,6 +1630,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Controller_Interact;
     private readonly InputAction m_Controller_Look;
     private readonly InputAction m_Controller_Jump;
+    private readonly InputAction m_Controller_Shoot;
     private readonly InputAction m_Controller_Sprint;
     /// <summary>
     /// Provides access to input actions defined in input action map "Controller".
@@ -1615,6 +1659,10 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Controller/Jump".
         /// </summary>
         public InputAction @Jump => m_Wrapper.m_Controller_Jump;
+        /// <summary>
+        /// Provides access to the underlying input action "Controller/Shoot".
+        /// </summary>
+        public InputAction @Shoot => m_Wrapper.m_Controller_Shoot;
         /// <summary>
         /// Provides access to the underlying input action "Controller/Sprint".
         /// </summary>
@@ -1657,6 +1705,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
+            @Shoot.started += instance.OnShoot;
+            @Shoot.performed += instance.OnShoot;
+            @Shoot.canceled += instance.OnShoot;
             @Sprint.started += instance.OnSprint;
             @Sprint.performed += instance.OnSprint;
             @Sprint.canceled += instance.OnSprint;
@@ -1683,6 +1734,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
+            @Shoot.started -= instance.OnShoot;
+            @Shoot.performed -= instance.OnShoot;
+            @Shoot.canceled -= instance.OnShoot;
             @Sprint.started -= instance.OnSprint;
             @Sprint.performed -= instance.OnSprint;
             @Sprint.canceled -= instance.OnSprint;
@@ -1919,6 +1973,13 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnJump(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Shoot" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnShoot(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "Sprint" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>

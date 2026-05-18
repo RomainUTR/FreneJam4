@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ff6e957176506f4c9e17508cceeba8b, type: 3}
   m_Name: PlayerSettings_Basic
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSettingsSO
-  walkSpeed: 3
-  runSpeed: 6
+  walkSpeed: 6
+  runSpeed: 10
   smoothMoveTime: 0.1
-  jumpForce: 8
+  fireRate: 5
+  maxHealth: 5
   gravity: 18
-  lockCursor: 1
+  lockCursor: 0
   mouseSensitivity: 0.5
   pitchMinMax: {x: -40, y: 85}
   rotationSmoothTime: 0.1

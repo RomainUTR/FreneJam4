@@ -343,7 +343,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAudio
   settings: {fileID: 11400000, guid: ea976804a0f268b40b59205b9b88d674, type: 2}
-  PlaySFXSound: {fileID: 11400000, guid: 7176d16f71a6e844aa780ab38cfd9adb, type: 2}
 --- !u!114 &8284732668948777798
 MonoBehaviour:
   m_ObjectHideFlags: 0

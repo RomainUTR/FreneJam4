@@ -9,72 +9,69 @@ public class PlayerMovement : MonoBehaviour
     [Required]
     public PlayerSettingsSO settings;
 
+    public RSE_OnPlayerDeath OnPlayerDeath;
+
     private CharacterController controller;
     private PlayerInput playerInput;
+    private Camera _mainCamera;
 
     private Vector3 velocity;
     private Vector3 smoothV;
     private float verticalVelocity;
-    
-    private bool jumping;
-    private float lastGroundedTime;
+
+    void OnEnable()
+    {
+        OnPlayerDeath.OnEventRaised += DisablePlayer;
+    }
+
+    void OnDisable()
+    {
+        OnPlayerDeath.OnEventRaised -= DisablePlayer;      
+    }
 
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
         playerInput = GetComponent<PlayerInput>();
-    }
 
-    private void OnEnable()
-    {
-        playerInput.OnJumpEvent += HandleJump;
-    }
-
-    private void OnDisable()
-    {
-        playerInput.OnJumpEvent -= HandleJump;
+        _mainCamera = Camera.main;
     }
 
     private void Update()
     {
         CalculateMovement();
-        ApplyGravityAndMove();
+        AimAtMouse();
+
+        controller.Move(velocity * Time.deltaTime);
     }
 
     private void CalculateMovement()
     {
         Vector3 inputDir = new Vector3(playerInput.MoveInput.x, 0, playerInput.MoveInput.y).normalized;
-        Vector3 worldInputDir = transform.TransformDirection(inputDir);
 
         float currentSpeed = playerInput.IsSprinting ? settings.runSpeed : settings.walkSpeed;
-        Vector3 targetVelocity = worldInputDir * currentSpeed;
-        
+
+        Vector3 targetVelocity = inputDir * currentSpeed;
+
         velocity = Vector3.SmoothDamp(velocity, targetVelocity, ref smoothV, settings.smoothMoveTime);
     }
 
-    private void ApplyGravityAndMove()
+    void AimAtMouse()
     {
-        verticalVelocity -= settings.gravity * Time.deltaTime;
-        velocity = new Vector3(velocity.x, verticalVelocity, velocity.z);
+        Ray ray = _mainCamera.ScreenPointToRay(playerInput.LookInput);
+        Plane groundPlane = new Plane(Vector3.up, new Vector3(0, transform.position.y, 0));
 
-        var flags = controller.Move(velocity * Time.deltaTime);
-        
-        if (flags == CollisionFlags.Below)
+        if (groundPlane.Raycast(ray, out float rayDistance))
         {
-            jumping = false;
-            lastGroundedTime = Time.time;
-            verticalVelocity = 0;
+            Vector3 point = ray.GetPoint(rayDistance);
+
+            Vector3 lookTarget = new Vector3(point.x, transform.position.y, point.z);
+            transform.LookAt(lookTarget);
         }
     }
 
-    private void HandleJump()
+    void DisablePlayer()
     {
-        float timeSinceLastTouchedGround = Time.time - lastGroundedTime;
-        
-        if (controller.isGrounded || (!jumping && timeSinceLastTouchedGround < 0.15f))
-        {
-            jumping = true;
-            verticalVelocity = settings.jumpForce;
-        }
+        enabled = false;
     }
 }

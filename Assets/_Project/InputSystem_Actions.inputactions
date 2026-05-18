@@ -750,6 +750,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Shoot",
+                    "type": "Button",
+                    "id": "cc971522-ea64-47c3-b786-1d84e756d298",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Sprint",
                     "type": "Button",
                     "id": "27d0b336-4233-4764-9c9b-bf4c765da8a5",
@@ -993,6 +1002,39 @@
                 },
                 {
                     "name": "",
+                    "id": "94124408-1f84-4120-82ca-1b5828943139",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1d0f93fc-a3d2-4e4e-a5b5-a708db236d1a",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e2ba5440-9e48-4c38-873b-7b3de0eb98d9",
+                    "path": "<XRController>/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "XR",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "473d8c5b-2753-4187-bc5f-8394c2a0a47e",
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
@@ -1005,7 +1047,7 @@
                 {
                     "name": "",
                     "id": "39c9d36c-87ba-4307-b36d-81874ed99b81",
-                    "path": "<Pointer>/delta",
+                    "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse;Touch",

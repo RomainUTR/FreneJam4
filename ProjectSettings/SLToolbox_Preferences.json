@@ -1,0 +1,16 @@
+{
+    "defaultPath": "Assets/_Project/Scripts/",
+    "classPath": "Assets/_Project/Scripts/",
+    "ssoPath": "Assets/_Project/Scripts/SSO/",
+    "rsoPath": "Assets/_Project/Scripts/RSO/",
+    "rsePath": "Assets/_Project/Scripts/RSE/",
+    "assetSSOPath": "Assets/_Project/Data/SSO/",
+    "assetRSOPath": "Assets/_Project/Data/RSO/",
+    "assetRSEPath": "Assets/_Project/Events/",
+    "COLOR_PREF_KEY": "RomainUTR_SLToolbox_StarColor",
+    "DEFAULT_HEX_COLOR": "#FFCA28",
+    "favoriteScenes": [
+        "Assets/_Project/Scenes/Levels/Game.unity",
+        "Assets/_Project/Scenes/Levels/Main.unity"
+    ]
+}

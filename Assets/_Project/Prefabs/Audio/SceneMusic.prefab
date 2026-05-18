@@ -44,8 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61fedf6029747a74a891b5d4ebf3d38b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MusicLayers:
-  - music: {fileID: 11400000, guid: d1e438585f699d94fae7dd6fa238455d, type: 2}
-    localVolume: 0
-  PlayOnStart: 1
-  MusicChange: {fileID: 11400000, guid: 91fc88573fd31b740b558e73359681f7, type: 2}
+  musicLayers: []
+  playOnStart: 1

@@ -6,9 +6,8 @@ public class PlayerAudio : MonoBehaviour
 {
     [Title("Configuration")]
     [InlineEditor(InlineEditorObjectFieldModes.Boxed)]
-    [Required, SerializeField]
-    private PlayerSettingsSO settings;
-    [SerializeField, Required] private RSE_PlaySFXSound PlaySFXSound;
+    [Required]
+    public PlayerSettingsSO settings;
 
     private CharacterController controller;
     private PlayerInput playerInput;
@@ -50,7 +49,7 @@ public class PlayerAudio : MonoBehaviour
     {
         if (settings.soundData != null)
         {
-            PlaySFXSound?.RaiseEvent(settings.soundData, transform.position);
+            //AudioManager.Instance.PlayClipAt(settings.soundData, transform.position);
         }
     }
 }

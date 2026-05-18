@@ -9,6 +9,7 @@ public class PlayerInput : MonoBehaviour
     public Vector2 MoveInput { get; private set; }
     public Vector2 LookInput { get; private set; }
     public bool IsSprinting { get; private set; }
+    public bool IsShooting { get; private set; }
 
     public event Action OnJumpEvent, OnInteractEvent;
 
@@ -41,10 +42,7 @@ public class PlayerInput : MonoBehaviour
         LookInput = ctx.Controller.Look.ReadValue<Vector2>();
         IsSprinting = ctx.Controller.Sprint.IsPressed();
 
-        if (ctx.Controller.Jump.WasPerformedThisFrame())
-        {
-            OnJumpEvent?.Invoke();
-        }
+        IsShooting = ctx.Controller.Shoot.IsPressed();
 
         if (ctx.Controller.Interact.WasPressedThisFrame())
         {

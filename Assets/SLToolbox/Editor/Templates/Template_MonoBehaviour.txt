@@ -1,0 +1,23 @@
+using UnityEngine;
+
+public class #CLASSNAME# : MonoBehaviour
+{
+    //[Header("Settings")]
+
+    //[Header("References")]
+
+    //[Header("Input")]
+
+    //[Header("Output")]
+
+
+    private void Start()
+    {
+        
+    }
+
+    private void Update()
+    {
+        
+    }
+}

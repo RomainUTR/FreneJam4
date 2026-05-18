@@ -1,0 +1,36 @@
+- Projectiles : 
+	- peuvent être tirés par le joueur
+	- peuvent être tirés par les ennemis
+	- peuvent être tirés par les boss
+	- peuvent faire du dégât à ceux qui les touchent
+	- se détruisent après avoir touché une cible, un mur ou après un certain temps
+
+- 1 bloc de spawn :
+	- peut faire spawner 1 ennemi à la fois
+	- peut faire spawner 1 boss
+	- peut faire spawner un bonus
+
+- les ennemis :
+	- ont une barre de vie
+	- peuvent être tués
+	- peuvent faire du dégât au joueur
+
+- les boss :
+	- ont une barre de vie plus grande que les ennemis
+	- peuvent être tués
+	- peuvent faire plus de dégât au joueur que les ennemis
+
+- random input :
+	- a des moments clés, les inputs du joueur changent (avant un boss par exemple)
+	- strictement limité à l'inversion des inputs
+	- doit être annoncé au joueur avant que les inputs ne soient inversés (ex : "les controls sont inversés !") et préciser les inputs concernés
+
+- the game hates you :
+	- le jeu est conçu pour être difficile
+	- le jeu décide à des moments aléatoires de faire des choses pour rendre le jeu plus difficile pour le joueur
+	- le jeu peut agir sur les réglages des inputs (vitesse de déplacement, vitesse de tir, etc.)
+
+- bonus :
+	- peut être ramassé par le joueur
+	- peut donner des avantages temporaires au joueur (ex : invincibilité, tir plus rapide, etc.)
+	- peut être détruit par les ennemis ou les boss
