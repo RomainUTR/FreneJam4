@@ -2993,7 +2993,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 713400578}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa0a485d9ca2b43ec9f4a61c756b2e53, type: 3}
   m_Name: 
@@ -3016,6 +3016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScoreManager
   ScoreUI: {fileID: 606519380}
   OnEnemyKilled: {fileID: 11400000, guid: 9f3d7756659df4c569a873acd89f4224, type: 2}
+  Score: {fileID: 11400000, guid: e122e5bd2e4374471a5b21180411ac30, type: 2}
 --- !u!114 &713400584
 MonoBehaviour:
   m_ObjectHideFlags: 0
