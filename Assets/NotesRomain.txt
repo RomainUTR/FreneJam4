@@ -15,11 +15,13 @@
 	- ont une barre de vie
 	- peuvent être tués
 	- peuvent faire du dégât au joueur
+	- améliorer l'ia
 
 - les boss :
 	- ont une barre de vie plus grande que les ennemis
 	- peuvent être tués
 	- peuvent faire plus de dégât au joueur que les ennemis
+	- hérite du l'ia des ennemis
 
 - random input :
 	- a des moments clés, les inputs du joueur changent (avant un boss par exemple)
