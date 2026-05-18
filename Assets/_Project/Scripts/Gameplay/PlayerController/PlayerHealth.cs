@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     [Required, InlineEditor] public SoundData HealSound, ExplosionSound;
     public GameObject FX_OnPlayerHit;
 
-    private int _currentHealth;
+    private float _currentHealth;
 
     void OnEnable()
     {
@@ -26,15 +26,34 @@ public class PlayerHealth : MonoBehaviour
         OnHealPlayer.OnEventRaised -= HealPlayer;
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Projectile"))
+        {
+            Projectile ball = other.GetComponent<Projectile>();
+
+            if (ball != null && ball.CanHurtPlayer)
+            {
+                // AudioManager.Instance.PlayClipAt(ExplosionSound, other.transform.position);
+                Instantiate(FX_OnPlayerHit, other.transform.position, Quaternion.identity);
+                OnDamakeTaken?.RaiseEvent(1.5f);
+
+                Destroy(other.gameObject);
+            }
+        }
+    }
+
+
     void Awake()
     {
         _currentHealth = Settings.maxHealth;
     }
 
-    void TakeDamage(int amount)
+    void TakeDamage(float amount)
     {
         _currentHealth -= amount;
         OnHealthChanged?.RaiseEvent(_currentHealth);
+        Debug.Log($"Player took {amount} damage. Current health: {_currentHealth}");
 
         if (_currentHealth <= 0)
         {   

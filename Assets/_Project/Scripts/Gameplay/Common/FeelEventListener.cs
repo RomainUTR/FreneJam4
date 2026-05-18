@@ -25,7 +25,7 @@ public class FeelEventListener : MonoBehaviour
         OnHealPlayer.OnEventRaised -= HealFeedbacks;
     }
 
-    void PlayFeedbacks(int amount)
+    void PlayFeedbacks(float amount)
     {
         if (FeedbackPlayer != null)
         {

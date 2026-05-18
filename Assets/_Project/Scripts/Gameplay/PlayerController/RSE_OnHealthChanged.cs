@@ -4,9 +4,9 @@ using UnityEngine.Events;
 [CreateAssetMenu(fileName = "RSE_OnDamakeTaken", menuName = "Scriptable Objects/RSE_OnHealthChanged")]
 public class RSE_OnHealthChanged : ScriptableObject
 {
-    public UnityAction<int> OnEventRaised;
+    public UnityAction<float> OnEventRaised;
 
-    public void RaiseEvent(int value)
+    public void RaiseEvent(float value)
     {
         if (OnEventRaised != null)
         {

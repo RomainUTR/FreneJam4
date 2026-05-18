@@ -1589,7 +1589,7 @@ GameObject:
   - component: {fileID: 471329242}
   m_Layer: 3
   m_Name: Cube (7)
-  m_TagString: Untagged
+  m_TagString: Enviro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1701,7 +1701,7 @@ GameObject:
   - component: {fileID: 492585767}
   m_Layer: 3
   m_Name: Cube (11)
-  m_TagString: Untagged
+  m_TagString: Enviro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2726,7 +2726,7 @@ GameObject:
   - component: {fileID: 677379133}
   m_Layer: 3
   m_Name: Pillar (2)
-  m_TagString: Untagged
+  m_TagString: Enviro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2838,7 +2838,7 @@ GameObject:
   - component: {fileID: 680258851}
   m_Layer: 3
   m_Name: Cube (8)
-  m_TagString: Untagged
+  m_TagString: Enviro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2948,7 +2948,6 @@ GameObject:
   - component: {fileID: 713400584}
   - component: {fileID: 713400583}
   - component: {fileID: 713400582}
-  - component: {fileID: 713400579}
   - component: {fileID: 713400581}
   m_Layer: 0
   m_Name: GameManager
@@ -2957,26 +2956,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &713400579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 713400578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d955beee89992854ead8ad42a357e64f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ArenaManager
-  ShrinkSpeed: 0.01
-  MinScale: 0.25
-  ShrinkMask: {x: 1, y: 0, z: 1}
-  UiShrinkSpeed: 0.005
-  UiMinScale: 0.5
-  ArenaContainer: {fileID: 119386545}
-  Player: {fileID: 3468769875501260247}
-  UiContainer: {fileID: 298204981}
 --- !u!4 &713400580
 Transform:
   m_ObjectHideFlags: 0
@@ -3014,7 +2993,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 713400578}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa0a485d9ca2b43ec9f4a61c756b2e53, type: 3}
   m_Name: 
@@ -3243,7 +3222,7 @@ GameObject:
   - component: {fileID: 841897200}
   m_Layer: 3
   m_Name: Cube (5)
-  m_TagString: Untagged
+  m_TagString: Enviro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3403,7 +3382,7 @@ GameObject:
   - component: {fileID: 995806735}
   m_Layer: 3
   m_Name: Cube (12)
-  m_TagString: Untagged
+  m_TagString: Enviro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4495,7 +4474,7 @@ GameObject:
   - component: {fileID: 1648674563}
   m_Layer: 3
   m_Name: Pillar (1)
-  m_TagString: Untagged
+  m_TagString: Enviro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4817,7 +4796,7 @@ GameObject:
   - component: {fileID: 1749418446}
   m_Layer: 3
   m_Name: Pillar
-  m_TagString: Untagged
+  m_TagString: Enviro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4929,7 +4908,7 @@ GameObject:
   - component: {fileID: 1803740014}
   m_Layer: 3
   m_Name: Cube (9)
-  m_TagString: Untagged
+  m_TagString: Enviro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5041,7 +5020,7 @@ GameObject:
   - component: {fileID: 1823691643}
   m_Layer: 3
   m_Name: Cube (10)
-  m_TagString: Untagged
+  m_TagString: Enviro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5153,7 +5132,7 @@ GameObject:
   - component: {fileID: 1889255839}
   m_Layer: 3
   m_Name: Cube (6)
-  m_TagString: Untagged
+  m_TagString: Enviro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6282,7 +6261,7 @@ GameObject:
   - component: {fileID: 2116398406}
   m_Layer: 3
   m_Name: Pillar (3)
-  m_TagString: Untagged
+  m_TagString: Enviro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

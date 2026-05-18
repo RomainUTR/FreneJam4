@@ -47,7 +47,7 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
             //AudioManager.Instance.PlayClipAt(ExplosionSound, other.transform.position);
             Instantiate(FX_OnPlayerHit, other.transform.position, Quaternion.identity);
-            OnDamakeTaken.RaiseEvent(Settings.Damage);
+            OnDamakeTaken.RaiseEvent(Settings.BaseDamage);
         }
     }
 }

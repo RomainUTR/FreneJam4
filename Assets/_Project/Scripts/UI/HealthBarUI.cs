@@ -15,7 +15,7 @@ public class HealthBarUI : MonoBehaviour
     public MMF_Player Feedbacks;
 
     private Material _healthMaterial;
-    private int _previousHealth;
+    private float _previousHealth;
     private Coroutine _flashCoroutine;
 
     void Start()
@@ -42,7 +42,7 @@ public class HealthBarUI : MonoBehaviour
         if (_healthMaterial != null) Destroy(_healthMaterial); 
     }
 
-    public void UpdateHealthDisplay(int currentHealth)
+    public void UpdateHealthDisplay(float currentHealth)
     {
         float fillAmount = (float)currentHealth / Settings.maxHealth;
         _healthMaterial.SetFloat("_Fill", fillAmount);

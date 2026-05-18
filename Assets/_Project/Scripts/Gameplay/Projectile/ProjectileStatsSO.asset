@@ -19,4 +19,4 @@ MonoBehaviour:
   BounceMask:
     serializedVersion: 2
     m_Bits: 8
-  MaxBounces: 100
+  MaxBounces: 10

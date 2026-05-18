@@ -3,7 +3,8 @@
 	- peuvent être tirés par les ennemis
 	- peuvent être tirés par les boss
 	- peuvent faire du dégât à ceux qui les touchent
-	- se détruisent après avoir touché une cible, un mur ou après un certain temps
+	- se détruisent après avoir touché une cible, x fois un mur ou après un certain temps
+	- considérer de leurs donner une barre de vie pour la lisibilité du joueur (ex : 3 points de vie pour les projectiles du joueur, 1 point de vie pour les projectiles des ennemis)
 
 - 1 bloc de spawn :
 	- peut faire spawner 1 ennemi à la fois
@@ -32,5 +33,5 @@
 
 - bonus :
 	- peut être ramassé par le joueur
-	- peut donner des avantages temporaires au joueur (ex : invincibilité, tir plus rapide, etc.)
+	- peut donner des avantages temporaires au joueur (ex : invincibilité, tir plus rapide, armure, regen, transpercer les ennemis, etc..)
 	- peut être détruit par les ennemis ou les boss

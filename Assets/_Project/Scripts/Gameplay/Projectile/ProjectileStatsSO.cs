@@ -8,7 +8,7 @@ public class ProjectileStatsSO : ScriptableObject
     [Range(0f,1f)] public float CollisionRadius = 0.5f;
 
     [Header("Combat")]
-    public int damage = 1;
+    public float damage = 1;
     public float PlayerGracePeriod = 0.5f;
 
     [Header("Physics Logic")]
