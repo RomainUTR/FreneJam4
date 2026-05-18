@@ -9,7 +9,7 @@ public class DebugUI : MonoBehaviour
 
     void Update()
     {
-        float remainingTime = playerCombat.GetRemainingCooldown();
-        cooldownText.text = "Cooldown : " + remainingTime.ToString("F2") + "s";
+        //float remainingTime = playerCombat.GetRemainingCooldown();
+        //cooldownText.text = "Cooldown : " + remainingTime.ToString("F2") + "s";
     }
 }

@@ -5,13 +5,15 @@ using UnityEngine;
 public class PlayerCombatUI : MonoBehaviour
 {
     public PlayerCombat CombatScript;
-    public Disc CooldownArc;
+    public Disc HeatArc;
 
     public float MaxAngleDegrees = 180f;
+    public Color ColdColor = Color.white;
+    public Color HotColor = Color.red;
 
-    public MMF_Player FeedbacksCooldown, FeedbacksShoot;
+    public MMF_Player FeedbacksReady, FeedbacksShoot, FeedbacksOverheat;
 
-    private bool _isReady = true;
+    private bool _wasOverheated = false;
     private float _startAngleRad;
 
     void OnEnable()
@@ -26,30 +28,30 @@ public class PlayerCombatUI : MonoBehaviour
 
     void Start()
     {
-        _startAngleRad = CooldownArc.AngRadiansStart;
-        HandleReadyFeedback(1f);
+        _startAngleRad = HeatArc.AngRadiansStart;
     }
 
     void Update()
     {
-        float ratio = CombatScript.GetCooldownRatio();
         float maxAngleRad = MaxAngleDegrees * Mathf.Deg2Rad;
-        CooldownArc.AngRadiansEnd = _startAngleRad + (maxAngleRad * ratio);
+        HeatArc.AngRadiansEnd = _startAngleRad + (maxAngleRad * CombatScript.currentHeat);
 
-        HandleReadyFeedback(ratio);
+        HeatArc.Color = Color.Lerp(ColdColor, HotColor, CombatScript.currentHeat);
+
+        HandleHeatStateFeedbacks();
     }
 
-    void HandleReadyFeedback(float currentRatio)
+    void HandleHeatStateFeedbacks()
     {
-        if (currentRatio >= 1f && !_isReady)
+        if (CombatScript.isOverheated && !_wasOverheated)
         {
-            _isReady = true;
-            FeedbacksCooldown.PlayFeedbacks();
-        } else if (currentRatio < 1f && _isReady)
+            _wasOverheated = true;
+            if (FeedbacksOverheat != null) FeedbacksOverheat.PlayFeedbacks();
+        }
+        else if (!CombatScript.isOverheated && _wasOverheated)
         {
-            _isReady = false;
-            FeedbacksCooldown.StopFeedbacks();
-            FeedbacksCooldown.RestoreInitialValues();
+            _wasOverheated = false;
+            if (FeedbacksReady != null) FeedbacksReady.PlayFeedbacks();
         }
     }
 

@@ -3063,10 +3063,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCombatUI
   CombatScript: {fileID: 8284732667718024300}
-  CooldownArc: {fileID: 1999797077}
+  HeatArc: {fileID: 1999797077}
   MaxAngleDegrees: 180
-  FeedbacksCooldown: {fileID: 1999797074}
+  ColdColor: {r: 0.0683018, g: 0.5660378, b: 0, a: 1}
+  HotColor: {r: 1, g: 0, b: 0, a: 1}
+  FeedbacksReady: {fileID: 1999797074}
   FeedbacksShoot: {fileID: 524027502}
+  FeedbacksOverheat: {fileID: 0}
 --- !u!4 &759389424
 Transform:
   m_ObjectHideFlags: 0
@@ -6680,10 +6683,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67384b7f2a82cde4890892e6e727d9f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCombat
-  settings: {fileID: 11400000, guid: ea976804a0f268b40b59205b9b88d674, type: 2}
-  projectilePrefab: {fileID: 8778667683677493124, guid: 2970f256f4dad8a48b17b82a81f17ae2, type: 3}
+  currentWeapon: {fileID: 11400000, guid: a7a6ff38e9de696489ea2ea2b48d538c, type: 2}
   firePoint: {fileID: 3468769875501260247}
-  ShootSound: {fileID: 11400000, guid: a765d6646eac9d6478350e1b3cfba5ae, type: 2}
 --- !u!114 &8284732667718024301
 MonoBehaviour:
   m_ObjectHideFlags: 0

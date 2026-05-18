@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ProjectileStatsSO
   Speed: 20
   CollisionRadius: 0.5
-  damage: 5
+  damage: 1
   PlayerGracePeriod: 0.2
   BounceMask:
     serializedVersion: 2
     m_Bits: 8
-  MaxBounces: 10
+  MaxBounces: 0

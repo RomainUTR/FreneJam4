@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySO
   BaseDamage: 1
   BaseHealth: 5
-  SpawnRate: 5
+  SpawnRate: 1.5
   SpawnRadius: 10
