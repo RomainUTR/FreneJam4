@@ -2945,6 +2945,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 713400580}
+  - component: {fileID: 713400585}
   - component: {fileID: 713400584}
   - component: {fileID: 713400583}
   - component: {fileID: 713400582}
@@ -3033,6 +3034,19 @@ MonoBehaviour:
   OnHealPlayer: {fileID: 11400000, guid: ef1f053dc64d3ef4b9392b2eb357315c, type: 2}
   ComboCap: 7
   HealValue: 1
+--- !u!114 &713400585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713400578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a054f6f440a5044e0b16e6cd1099fbcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomInputManager
+  ToggleInputInversion: {fileID: 11400000, guid: c48ccfe50762947a6894ce22b651f1d7, type: 2}
 --- !u!1 &759389422
 GameObject:
   m_ObjectHideFlags: 0
@@ -6965,6 +6979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInput
   settings: {fileID: 11400000, guid: ea976804a0f268b40b59205b9b88d674, type: 2}
+  ToggleInputInversion: {fileID: 11400000, guid: c48ccfe50762947a6894ce22b651f1d7, type: 2}
 --- !u!114 &8284732667718024299
 MonoBehaviour:
   m_ObjectHideFlags: 0
