@@ -56,8 +56,8 @@ public class Enemy : MonoBehaviour
         } else if (other.CompareTag("Player"))
         {
             Instantiate(FX_OnPlayerHit, other.transform.position, Quaternion.identity);
-
-            EnemyTakeDamage.RaiseEvent(this.gameObject, projectileStats.damage);
+            Destroy(this.gameObject);
+            OnDamakeTaken.RaiseEvent(Settings.BaseDamage);
         }
     }
 

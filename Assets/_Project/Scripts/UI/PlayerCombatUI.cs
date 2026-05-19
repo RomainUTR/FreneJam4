@@ -51,6 +51,14 @@ public class PlayerCombatUI : MonoBehaviour
         else if (!CombatScript.isOverheated && _wasOverheated)
         {
             _wasOverheated = false;
+            
+            if (FeedbacksOverheat != null) 
+            {
+                FeedbacksOverheat.StopFeedbacks();
+                
+                FeedbacksOverheat.RestoreInitialValues(); 
+            }
+
             if (FeedbacksReady != null) FeedbacksReady.PlayFeedbacks();
         }
     }
