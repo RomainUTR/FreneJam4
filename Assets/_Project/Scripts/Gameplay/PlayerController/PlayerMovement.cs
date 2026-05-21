@@ -1,4 +1,6 @@
 using Sirenix.OdinInspector;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController), typeof(PlayerInput))]
@@ -10,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public PlayerSettingsSO settings;
 
     public RSE_OnPlayerDeath OnPlayerDeath;
+    public RSF_ForceReduceSpeedMovement ForceReduceSpeedMovement;
 
     private CharacterController controller;
     private PlayerInput playerInput;
@@ -19,14 +22,19 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 smoothV;
     private float verticalVelocity;
 
+    private float speedModifier = 1f;
+    private float reduceSpeedDuration = 5f;
+
     void OnEnable()
     {
         OnPlayerDeath.OnEventRaised += DisablePlayer;
+        ForceReduceSpeedMovement.OnInvoke = HandleReduceSpeed;
     }
 
     void OnDisable()
     {
         OnPlayerDeath.OnEventRaised -= DisablePlayer;      
+        ForceReduceSpeedMovement.OnInvoke = null;
     }
 
     private void Awake()
@@ -51,7 +59,9 @@ public class PlayerMovement : MonoBehaviour
 
         float currentSpeed = playerInput.IsSprinting ? settings.runSpeed : settings.walkSpeed;
 
-        Vector3 targetVelocity = inputDir * currentSpeed;
+        float modifiedSpeed = currentSpeed * speedModifier;
+
+        Vector3 targetVelocity = inputDir * modifiedSpeed;
 
         velocity = Vector3.SmoothDamp(velocity, targetVelocity, ref smoothV, settings.smoothMoveTime);
     }
@@ -73,5 +83,22 @@ public class PlayerMovement : MonoBehaviour
     void DisablePlayer()
     {
         enabled = false;
+    }
+
+    bool HandleReduceSpeed()
+    {
+        if (speedModifier == 0.5f) return false;
+
+        speedModifier = 0.5f;
+        StartCoroutine(WaitForReturnToNormalSpeed());
+
+        return true;
+    }
+
+    IEnumerator WaitForReturnToNormalSpeed()
+    {
+        yield return new WaitForSeconds(reduceSpeedDuration);
+
+        speedModifier = 1f;
     }
 }

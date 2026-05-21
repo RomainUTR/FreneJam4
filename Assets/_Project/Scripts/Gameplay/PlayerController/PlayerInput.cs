@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using Sirenix.OdinInspector;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class PlayerInput : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class PlayerInput : MonoBehaviour
     public PlayerSettingsSO settings;
 
     public RSE_ToggleInputInversion ToggleInputInversion;
+    public RSF_ForceSwapInput ForceSwapInput;
 
     private InputActionMap _currentMap;
     private InputAction _moveAction;
@@ -31,6 +33,7 @@ public class PlayerInput : MonoBehaviour
     private InputAction _interactAction;
 
     private bool _isInputInverted = false;
+    public float SwapInputDuration = 5f;
 
     void Awake()
     {
@@ -42,11 +45,13 @@ public class PlayerInput : MonoBehaviour
     {
         ctx.Enable();
         ToggleInputInversion.OnEventRaised += SwapInput;
+        ForceSwapInput.OnInvoke = HandleSwapInput;
     }
     void OnDisable()
     {
         ctx.Disable();
         ToggleInputInversion.OnEventRaised -= SwapInput;
+        ForceSwapInput.OnInvoke = HandleSwapInput;
     }
 
     private void Start()
@@ -112,5 +117,22 @@ public class PlayerInput : MonoBehaviour
         _interactAction = _currentMap.FindAction("Interact");
 
         _currentMap.Enable();
+    }
+
+    private bool HandleSwapInput()
+    {
+        if (_isInputInverted == true) return false;
+
+        SwapInput();
+        StartCoroutine(WaitForReturnToNormalInput());
+
+        return true;
+    }
+
+    IEnumerator WaitForReturnToNormalInput()
+    {
+        yield return new WaitForSeconds(SwapInputDuration);
+
+        SwapInput();
     }
 }

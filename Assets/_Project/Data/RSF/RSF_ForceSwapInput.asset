@@ -9,10 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01129deaf46a34625987ee878fe5ff93, type: 3}
-  m_Name: EnemySO
-  m_EditorClassIdentifier: Assembly-CSharp::EnemySO
-  BaseDamage: 1
-  BaseHealth: 5
-  SpawnRate: 5
-  SpawnRadius: 10
+  m_Script: {fileID: 11500000, guid: 571a7bb4f496bde46a3c385816fc8f4b, type: 3}
+  m_Name: RSF_ForceSwapInput
+  m_EditorClassIdentifier: Assembly-CSharp::RSF_ForceSwapInput

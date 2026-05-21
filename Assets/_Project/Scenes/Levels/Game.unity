@@ -2995,7 +2995,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 713400578}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa0a485d9ca2b43ec9f4a61c756b2e53, type: 3}
   m_Name: 
@@ -3062,8 +3062,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameHateManager
   MalusPool:
   - {fileID: 11400000, guid: 205aebac737da2c4480f6153c01fa93b, type: 2}
+  - {fileID: 11400000, guid: 08f0bea2751037746a6563a937749582, type: 2}
+  - {fileID: 11400000, guid: aacc3eb552bb6ca439ac8436a897162c, type: 2}
+  - {fileID: 11400000, guid: 02aafbc27737d694ab91d5d42b27eb5d, type: 2}
   AskForPunishment: {fileID: 11400000, guid: 5c1d54e2930d83c4786898ca225debe3, type: 2}
-  timeBetweenPunishments: 10
+  timeBetweenPunishments: 5
 --- !u!1 &759389422
 GameObject:
   m_ObjectHideFlags: 0
@@ -6868,6 +6871,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3468769875501260247}
+  - component: {fileID: 8284732667718024302}
   - component: {fileID: 8284732667718024301}
   - component: {fileID: 8284732667718024300}
   - component: {fileID: 7410833698720120644}
@@ -6909,6 +6913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FPSController
   settings: {fileID: 11400000, guid: ea976804a0f268b40b59205b9b88d674, type: 2}
   OnPlayerDeath: {fileID: 11400000, guid: a99ec57a21fcb4787b1868f459cfba10, type: 2}
+  ForceReduceSpeedMovement: {fileID: 11400000, guid: aacc3eb552bb6ca439ac8436a897162c, type: 2}
 --- !u!23 &7627906043303098414
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6997,6 +7002,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInput
   settings: {fileID: 11400000, guid: ea976804a0f268b40b59205b9b88d674, type: 2}
   ToggleInputInversion: {fileID: 11400000, guid: c48ccfe50762947a6894ce22b651f1d7, type: 2}
+  ForceSwapInput: {fileID: 11400000, guid: 08f0bea2751037746a6563a937749582, type: 2}
+  SwapInputDuration: 5
 --- !u!114 &8284732667718024299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7044,6 +7051,23 @@ MonoBehaviour:
   HealSound: {fileID: 11400000, guid: 7c32af29794453d498983c46a27e84ae, type: 2}
   ExplosionSound: {fileID: 11400000, guid: cecbfeb8eb29cff4bb9822aafcbd6edb, type: 2}
   FX_OnPlayerHit: {fileID: 3773410661760029208, guid: 1afbbcce24aef424f84de2755a6f7627, type: 3}
+--- !u!114 &8284732667718024302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5243703727456354396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 944fc58abb366ad47bf44ee302c29258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMalusHandler
+  SearchRadius: 20
+  EnemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  ForceTeleportToClosestEnemy: {fileID: 11400000, guid: 02aafbc27737d694ab91d5d42b27eb5d, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

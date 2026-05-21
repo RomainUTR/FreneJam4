@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5111014517281582799}
   - component: {fileID: 2076597828170709472}
   - component: {fileID: 6410397233288694550}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ MonoBehaviour:
   Settings: {fileID: 11400000, guid: e45bda1eaba5c437ea08ceeaff1ba8f4, type: 2}
   OnDamakeTaken: {fileID: 11400000, guid: cdd7327e9efe24701bd2feb5be557ff0, type: 2}
   OnEnemyKilled: {fileID: 11400000, guid: 9f3d7756659df4c569a873acd89f4224, type: 2}
-  ExplosionSound: {fileID: 11400000, guid: cecbfeb8eb29cff4bb9822aafcbd6edb, type: 2}
+  ExplosionSound: {fileID: 0}
   FX_OnHit: {fileID: 3773410661760029208, guid: 04460ba7d68ee4163bb72e14afc5150a, type: 3}
   FX_OnPlayerHit: {fileID: 3773410661760029208, guid: 1afbbcce24aef424f84de2755a6f7627, type: 3}
   EnemyTakeDamage: {fileID: 11400000, guid: 7626776811bd541079c241992545635b, type: 2}

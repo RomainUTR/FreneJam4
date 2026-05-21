@@ -60,6 +60,8 @@ public class GameHateManager : MonoBehaviour
             {
                 temporaryPool.RemoveAt(randomIndex);
             }
+
+            Debug.Log(selectedMalus.name);
         }
 
         if (punishmentApplied)
