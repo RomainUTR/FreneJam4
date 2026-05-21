@@ -2945,6 +2945,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 713400580}
+  - component: {fileID: 713400586}
   - component: {fileID: 713400585}
   - component: {fileID: 713400584}
   - component: {fileID: 713400583}
@@ -2994,7 +2995,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 713400578}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa0a485d9ca2b43ec9f4a61c756b2e53, type: 3}
   m_Name: 
@@ -3047,6 +3048,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomInputManager
   ToggleInputInversion: {fileID: 11400000, guid: c48ccfe50762947a6894ce22b651f1d7, type: 2}
+--- !u!114 &713400586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713400578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da43a012e81870d4aafaf4d02bc9132e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameHateManager
+  MalusPool:
+  - {fileID: 11400000, guid: 205aebac737da2c4480f6153c01fa93b, type: 2}
+  AskForPunishment: {fileID: 11400000, guid: 5c1d54e2930d83c4786898ca225debe3, type: 2}
+  timeBetweenPunishments: 10
 --- !u!1 &759389422
 GameObject:
   m_ObjectHideFlags: 0
@@ -7006,6 +7023,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCombat
   currentWeapon: {fileID: 11400000, guid: a7a6ff38e9de696489ea2ea2b48d538c, type: 2}
   firePoint: {fileID: 3468769875501260247}
+  RSF_ForceOverheat: {fileID: 11400000, guid: 205aebac737da2c4480f6153c01fa93b, type: 2}
 --- !u!114 &8284732667718024301
 MonoBehaviour:
   m_ObjectHideFlags: 0

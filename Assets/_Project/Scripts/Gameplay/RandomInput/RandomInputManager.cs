@@ -14,7 +14,7 @@ public class RandomInputManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(WaitForSwapInput());
+        //StartCoroutine(WaitForSwapInput());
     }
 
     private IEnumerator WaitForSwapInput()

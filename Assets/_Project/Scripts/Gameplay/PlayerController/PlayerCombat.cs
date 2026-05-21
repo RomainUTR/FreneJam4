@@ -12,6 +12,8 @@ public class PlayerCombat : MonoBehaviour
     [Title("Setup")]
     [Required] public Transform firePoint;
 
+    public RSF_ForceOverheat RSF_ForceOverheat;
+
     public float currentHeat { get; private set; } = 0f;
     public bool isOverheated { get; private set; } = false;
 
@@ -21,6 +23,16 @@ public class PlayerCombat : MonoBehaviour
     private float nextFireTime = 0f;
 
     private IObjectPool<Projectile> projectilePool;
+
+    private void OnEnable()
+    {
+        RSF_ForceOverheat.OnInvoke = PunishWithOverheat;
+    }
+
+    private void OnDisable()
+    {
+        RSF_ForceOverheat.OnInvoke = null;
+    }
 
     private void Awake()
     {
@@ -82,5 +94,15 @@ public class PlayerCombat : MonoBehaviour
     private Projectile CreateProjectile()
     {
         return Instantiate(currentWeapon.projectilePrefab);
+    }
+
+    private bool PunishWithOverheat()
+    {
+        if (isOverheated) return false;
+
+        currentHeat = 1f;
+        isOverheated = true;
+
+        return true;
     }
 }
