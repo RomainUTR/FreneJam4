@@ -49,10 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5035bd3f13e20ce45a669018829a786a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
-  Stats: {fileID: 11400000, guid: 7b172af91c0f4844fa566cc34e68abdd, type: 2}
-  OnComboFinished: {fileID: 11400000, guid: 9b668f56102340d409dd5e1edc885445, type: 2}
-  BounceSound: {fileID: 11400000, guid: 550cfa7a8e84f4040b960c5eda21672d, type: 2}
-  EnemyKilledCount: 0
+  runtimeStats: {fileID: 11400000, guid: b4e5ba22da7ac614d8ac815182750a2c, type: 2}
 --- !u!33 &2729572566704626572
 MeshFilter:
   m_ObjectHideFlags: 0

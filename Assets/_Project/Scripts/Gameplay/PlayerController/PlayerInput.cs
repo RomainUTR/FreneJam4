@@ -15,15 +15,20 @@ public class PlayerInput : MonoBehaviour
 
     public event Action OnJumpEvent, OnInteractEvent;
 
-    private Vector2 _inputMultiplier = new Vector2(1f, 1f);
+    public event Action OnInputMapChanged;
 
     [Title("Configuration")]
     [InlineEditor(InlineEditorObjectFieldModes.Boxed)]
     [Required]
     public PlayerSettingsSO settings;
 
-    public RSE_ToggleInputInversion ToggleInputInversion;
+    [Title("Malus Settings")]
     public RSF_ForceSwapInput ForceSwapInput;
+    public float SwapInputDuration = 5f;
+
+    [InfoBox("Les noms exacts de des Action Maps dans l'InputSystem")]
+    public string[] ShuffledMapNames = { "Shuffle1", "Shuffle2", "Shuffle3" };
+    private readonly string _baseMapName = "Controller";
 
     private InputActionMap _currentMap;
     private InputAction _moveAction;
@@ -32,8 +37,7 @@ public class PlayerInput : MonoBehaviour
     private InputAction _shootAction;
     private InputAction _interactAction;
 
-    private bool _isInputInverted = false;
-    public float SwapInputDuration = 5f;
+    private bool _isShuffled = false;
 
     void Awake()
     {
@@ -44,14 +48,13 @@ public class PlayerInput : MonoBehaviour
     void OnEnable()
     {
         ctx.Enable();
-        ToggleInputInversion.OnEventRaised += SwapInput;
         ForceSwapInput.OnInvoke = HandleSwapInput;
     }
+
     void OnDisable()
     {
         ctx.Disable();
-        ToggleInputInversion.OnEventRaised -= SwapInput;
-        ForceSwapInput.OnInvoke = HandleSwapInput;
+        ForceSwapInput.OnInvoke = null;
     }
 
     private void Start()
@@ -62,52 +65,29 @@ public class PlayerInput : MonoBehaviour
             Cursor.visible = false;
         }
 
-        SetInputMap(false);
+        SetInputMap(_baseMapName);
     }
 
     void Update()
     {
-        MoveInput = _moveAction.ReadValue<Vector2>() * _inputMultiplier;
+        MoveInput = _moveAction.ReadValue<Vector2>();
         LookInput = _lookAction.ReadValue<Vector2>();
         IsSprinting = _sprintAction.IsPressed();
-
         IsShooting = _shootAction.IsPressed();
 
-        if (ctx.Controller.Interact.WasPressedThisFrame())
+        if (_interactAction.WasPressedThisFrame())
         {
             OnInteractEvent?.Invoke();
         }
     }
 
-    private void SwapInput()
-    {
-        if (_inputMultiplier.x == 1f && _inputMultiplier.y == 1f)
-        {
-            _inputMultiplier = new Vector2(-1f, -1f);
-        } else if (_inputMultiplier.x == -1f && _inputMultiplier.y == -1f)
-        {
-            _inputMultiplier = new Vector2(1f, 1f);
-        }
-
-        if (_isInputInverted == true)
-        {
-            SetInputMap(false);
-        } else
-        {
-            SetInputMap(true);
-        }
-    }
-
-    public void SetInputMap(bool isInverted)
+    public void SetInputMap(string mapName)
     {
         if (_currentMap != null)
         {
             _currentMap.Disable();
         }
 
-        _isInputInverted = isInverted;
-
-        string mapName = isInverted ? "InvertedController" : "Controller";
         _currentMap = ctx.asset.FindActionMap(mapName);
 
         _moveAction = _currentMap.FindAction("Move");
@@ -117,13 +97,20 @@ public class PlayerInput : MonoBehaviour
         _interactAction = _currentMap.FindAction("Interact");
 
         _currentMap.Enable();
+
+        OnInputMapChanged?.Invoke();
     }
 
     private bool HandleSwapInput()
     {
-        if (_isInputInverted == true) return false;
+        if (_isShuffled || ShuffledMapNames.Length == 0) return false;
 
-        SwapInput();
+        _isShuffled = true;
+
+        int randomIndex = UnityEngine.Random.Range(0, ShuffledMapNames.Length);
+        string randomMapName = ShuffledMapNames[randomIndex];
+
+        SetInputMap(randomMapName);
         StartCoroutine(WaitForReturnToNormalInput());
 
         return true;
@@ -133,6 +120,38 @@ public class PlayerInput : MonoBehaviour
     {
         yield return new WaitForSeconds(SwapInputDuration);
 
-        SwapInput();
+        _isShuffled = false;
+        SetInputMap(_baseMapName);
+    }
+
+    public string GetActionKeyName(string actionName, string expectedPart = "")
+    {
+        if (_currentMap == null) return "";
+
+        InputAction action = _currentMap.FindAction(actionName);
+        if (action != null)
+        {
+            if (string.IsNullOrEmpty(expectedPart))
+            {
+                return action.GetBindingDisplayString(0);
+            }
+
+            for (int i = 0; i < action.bindings.Count; i++)
+            {
+                InputBinding binding = action.bindings[i];
+
+                if (binding.isPartOfComposite && binding.name.ToLower() == expectedPart.ToLower())
+                {
+                    string displayString = action.GetBindingDisplayString(i);
+
+                    if (!string.IsNullOrEmpty(displayString))
+                    {
+                        return displayString;
+                    }
+                }
+            }
+        }
+
+        return "";
     }
 }

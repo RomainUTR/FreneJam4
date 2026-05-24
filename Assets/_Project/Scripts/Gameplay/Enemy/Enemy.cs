@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public RSE_OnDamakeTaken OnDamakeTaken;
     public RSE_OnEnemyKilled OnEnemyKilled;
     [Required, InlineEditor] public SoundData ExplosionSound;
+    public RSO_EnemyScaling enemyScaling;
 
     public GameObject FX_OnHit, FX_OnPlayerHit;
     public RSE_EnemyTakeDamage EnemyTakeDamage;
@@ -48,16 +49,16 @@ public class Enemy : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Projectile"))
+        if(other.CompareTag("Projectile")) // Si l'ennemi prend des dégats par un projectile
         {
             Instantiate(FX_OnHit, transform.position, Quaternion.identity);
 
             EnemyTakeDamage.RaiseEvent(this.gameObject, projectileStats.damage);
-        } else if (other.CompareTag("Player"))
+        } else if (other.CompareTag("Player")) // Si le player prend des dégats par l'ennemi
         {
             Instantiate(FX_OnPlayerHit, other.transform.position, Quaternion.identity);
-            Destroy(this.gameObject);
-            OnDamakeTaken.RaiseEvent(Settings.BaseDamage);
+            OnDamakeTaken.RaiseEvent(Settings.BaseDamage * enemyScaling.damageMultiplier);
+            OnEnemyKilled.RaiseEvent(this.gameObject);
         }
     }
 

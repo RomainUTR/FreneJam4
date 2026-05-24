@@ -5,6 +5,7 @@ public class EnemyHealth : MonoBehaviour
 {
     [Header("Settings")]
     public EnemySO enemySO;
+    public RSO_EnemyScaling enemyScaling;
 
     //[Header("References")]
 
@@ -18,7 +19,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Awake()
     {
-        _currentHealth = enemySO.BaseHealth;
+        _currentHealth = enemySO.BaseHealth * enemyScaling.healthMultiplier;
         HPText.text = _currentHealth.ToString();
     }
 

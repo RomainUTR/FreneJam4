@@ -15,9 +15,6 @@ public class PlayerSettingsSO : ScriptableObject
     public float smoothMoveTime = 0.1f;
 
     [BoxGroup("Combat Settings")]
-    [SuffixLabel("sec", true)]
-    public float fireRate = 2f;
-    public float damage = 1f;
     public int maxHealth = 50;
 
     [BoxGroup("Physics Settings")]

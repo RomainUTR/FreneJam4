@@ -6,11 +6,12 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController), typeof(PlayerInput))]
 public class PlayerMovement : MonoBehaviour
 {
-    [Title("Configuration")]
+    [Title("Data")]
     [InlineEditor(InlineEditorObjectFieldModes.Boxed)]
     [Required]
-    public PlayerSettingsSO settings;
+    public RSO_PlayerRuntimeStats runtimeStats;
 
+    [Title("Malus & Events")]
     public RSE_OnPlayerDeath OnPlayerDeath;
     public RSF_ForceReduceSpeedMovement ForceReduceSpeedMovement;
 
@@ -33,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnDisable()
     {
-        OnPlayerDeath.OnEventRaised -= DisablePlayer;      
+        OnPlayerDeath.OnEventRaised -= DisablePlayer;
         ForceReduceSpeedMovement.OnInvoke = null;
     }
 
@@ -41,7 +42,6 @@ public class PlayerMovement : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         playerInput = GetComponent<PlayerInput>();
-
         _mainCamera = Camera.main;
     }
 
@@ -57,13 +57,15 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 inputDir = new Vector3(playerInput.MoveInput.x, 0, playerInput.MoveInput.y).normalized;
 
-        float currentSpeed = playerInput.IsSprinting ? settings.runSpeed : settings.walkSpeed;
+        float currentSpeed = playerInput.IsSprinting
+            ? runtimeStats.currentRunSpeed
+            : runtimeStats.basePlayerSettings.walkSpeed;
 
         float modifiedSpeed = currentSpeed * speedModifier;
 
         Vector3 targetVelocity = inputDir * modifiedSpeed;
 
-        velocity = Vector3.SmoothDamp(velocity, targetVelocity, ref smoothV, settings.smoothMoveTime);
+        velocity = Vector3.SmoothDamp(velocity, targetVelocity, ref smoothV, runtimeStats.basePlayerSettings.smoothMoveTime);
     }
 
     void AimAtMouse()
@@ -98,7 +100,6 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator WaitForReturnToNormalSpeed()
     {
         yield return new WaitForSeconds(reduceSpeedDuration);
-
         speedModifier = 1f;
     }
 }

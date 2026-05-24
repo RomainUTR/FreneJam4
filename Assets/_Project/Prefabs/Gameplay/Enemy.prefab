@@ -54,6 +54,7 @@ MonoBehaviour:
   OnDamakeTaken: {fileID: 11400000, guid: cdd7327e9efe24701bd2feb5be557ff0, type: 2}
   OnEnemyKilled: {fileID: 11400000, guid: 9f3d7756659df4c569a873acd89f4224, type: 2}
   ExplosionSound: {fileID: 0}
+  enemyScaling: {fileID: 11400000, guid: aa940add71214e046a06f695b333dbc2, type: 2}
   FX_OnHit: {fileID: 3773410661760029208, guid: 04460ba7d68ee4163bb72e14afc5150a, type: 3}
   FX_OnPlayerHit: {fileID: 3773410661760029208, guid: 1afbbcce24aef424f84de2755a6f7627, type: 3}
   EnemyTakeDamage: {fileID: 11400000, guid: 7626776811bd541079c241992545635b, type: 2}
@@ -73,6 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   enemySO: {fileID: 11400000, guid: e45bda1eaba5c437ea08ceeaff1ba8f4, type: 2}
+  enemyScaling: {fileID: 11400000, guid: aa940add71214e046a06f695b333dbc2, type: 2}
   EnemyTakeDamage: {fileID: 11400000, guid: 7626776811bd541079c241992545635b, type: 2}
   HPText: {fileID: 506616078760310524}
   OnEnemyKilled: {fileID: 11400000, guid: 9f3d7756659df4c569a873acd89f4224, type: 2}

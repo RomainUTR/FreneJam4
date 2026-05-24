@@ -1155,7 +1155,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             ]
         },
         {
-            ""name"": ""InvertedController"",
+            ""name"": ""Shuffle1"",
             ""id"": ""2b833210-1864-493e-96ee-faf688205f4b"",
             ""actions"": [
                 {
@@ -1239,7 +1239,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""up"",
                     ""id"": ""e67bc91d-cdb3-4e73-b6d5-726b69f0cb36"",
-                    ""path"": ""<Keyboard>/w"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
@@ -1250,10 +1250,10 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""down"",
                     ""id"": ""ac68af83-f82d-43a0-8538-059051cde75f"",
-                    ""path"": ""<Keyboard>/s"",
+                    ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
+                    ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -1261,7 +1261,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""left"",
                     ""id"": ""48e63703-585d-4f52-89ec-d689a3b657c9"",
-                    ""path"": ""<Keyboard>/a"",
+                    ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
@@ -1272,10 +1272,10 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""right"",
                     ""id"": ""86c45b30-532a-4387-a6fa-7b09ebb2bb6b"",
-                    ""path"": ""<Keyboard>/d"",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
+                    ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -1512,6 +1512,724 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Shuffle2"",
+            ""id"": ""bf3b84ec-0c32-4596-bf4e-4bddc2c445f4"",
+            ""actions"": [
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""Value"",
+                    ""id"": ""94c07542-e2cb-4a76-a647-b338316275df"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""40721490-4a42-4efa-aa81-b9556d523a03"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Hold"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Look"",
+                    ""type"": ""Value"",
+                    ""id"": ""ea77b93f-5ff1-44b0-94b4-f14c3c25749d"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""a4c18aad-53e6-480a-9d91-5e6c9d615df7"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""c1157c0a-fd8f-45b5-a2ae-9e4317741735"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Sprint"",
+                    ""type"": ""Button"",
+                    ""id"": ""86b75196-c027-4ee6-a2a0-791b0a5b70a5"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""9e44643b-924c-4b26-9f5e-9bf2ecf8ebbf"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""eec899d3-07d3-4fac-b8a1-71e16356bd6b"",
+                    ""path"": ""Dpad"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""f65e82a7-4453-46d2-bdb1-bab8542ac296"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""f3f86310-3404-4371-9a2f-59707f4f65bb"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""8a0ae6b3-4887-4619-bc00-2f62f9eae715"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""89250f30-4fd4-4ab0-a78a-3a39ed673d68"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1c82b6f7-99b9-47cd-9c88-dd60c1ea73f8"",
+                    ""path"": ""<XRController>/{Primary2DAxis}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""XR"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7cae4e18-dc40-454c-92c2-875f313d67c9"",
+                    ""path"": ""<Joystick>/stick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Joystick"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Arrows"",
+                    ""id"": ""cd7b5515-1ccd-4b24-8e67-c5c8b59884af"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""f302e389-859a-41b5-b445-b4d255c43cb9"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""648d39ac-1670-4a61-a19d-e6f810dbfb54"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""f01a9025-a39d-4e9f-a2f9-0c8407a72980"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""f99dfa30-f03e-454d-89c2-8e065465174e"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8320d93a-bd14-402b-939a-d4fe7eae4b2c"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5f7b1c63-8dd1-4ccc-b61c-c3fb17c253d3"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bd0e306d-5052-4597-84c2-fe23a516f902"",
+                    ""path"": ""<Keyboard>/leftShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Sprint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c05801ba-02d5-467a-8699-966d2be37236"",
+                    ""path"": ""<Gamepad>/leftStickPress"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Sprint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1e17b823-4813-4fbc-aba8-dd47defab9af"",
+                    ""path"": ""<XRController>/trigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""XR"",
+                    ""action"": ""Sprint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""49ff79bd-1e33-46c1-be1f-991a8d650221"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""af50d5cc-6e9e-4561-92eb-ad92d354dedb"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""066ba815-6585-4c95-b841-e946c092e85d"",
+                    ""path"": ""<XRController>/secondaryButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""XR"",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b47f599f-5209-4fba-8844-eb889c231f84"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""95b2164f-017b-4ec7-93f7-e5143e4245aa"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""87c24e5b-8883-4459-9fef-7f42f05df0f4"",
+                    ""path"": ""<XRController>/secondaryButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""XR"",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d793dedf-0da9-410d-b93d-04ca6e6ec39e"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cdac5c69-b5c1-41fc-bde6-93d138600850"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse;Touch"",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d13a2e93-d102-4682-95f5-db5e4e0e9b40"",
+                    ""path"": ""<Joystick>/{Hatswitch}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Joystick"",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Shuffle3"",
+            ""id"": ""d0e60816-8a0a-48b6-99e7-698d2b987dce"",
+            ""actions"": [
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""Value"",
+                    ""id"": ""5f69c211-c030-4d48-a224-2c42c84ee0f4"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""b4377e28-e0d8-425a-b447-7514085a92a5"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Hold"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Look"",
+                    ""type"": ""Value"",
+                    ""id"": ""e0ec5010-a949-4c9b-857d-36a4f27a118a"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""00c9a10b-ac76-49a8-a0b3-32c59b8e6f4f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""35dab52a-d82e-4c6c-aa07-7707ee4a843f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Sprint"",
+                    ""type"": ""Button"",
+                    ""id"": ""8a51d550-e3ad-40ed-9117-f21cb0872c3a"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""2b076fc5-5e7e-41d7-9779-c69653b7325f"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""36d2f3c4-bad8-4a3f-a80b-732823d3cb32"",
+                    ""path"": ""Dpad"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""0862706c-09e2-482e-882a-e19ae0c1560b"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""235e7203-3627-4dc6-9e63-6d81e78b102d"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""d82321c8-71c3-469d-8dc9-f8291dd03a76"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""dc723dcd-9aef-4d0c-9b39-a58bc1711636"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3fd3fab2-93a1-4712-a375-13d27cd6dce5"",
+                    ""path"": ""<XRController>/{Primary2DAxis}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""XR"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f2ecb05b-bad9-4640-83dc-8692d015d50b"",
+                    ""path"": ""<Joystick>/stick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Joystick"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Arrows"",
+                    ""id"": ""302dc6a3-f019-4628-8d4f-1a170f4bab41"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""7190e6f7-4c88-49db-907d-72bf420364fc"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""069ed18c-b1a1-4134-b318-c87e7b187255"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""3a8843af-5939-4b8a-ae7f-0e7667a12488"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""289a062a-e402-4902-8c2e-04f6fd4d4aba"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""95b2f19a-5a16-4a7e-8ff7-df47b16e0b6d"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""36295b52-2624-4459-8119-55157fabda4d"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""94b820bd-f613-41d2-8e43-dc87e6cef7fd"",
+                    ""path"": ""<Keyboard>/leftShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Sprint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8d60f262-fbe0-4020-b7f3-915e9a473097"",
+                    ""path"": ""<Gamepad>/leftStickPress"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Sprint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f8d77d1c-1e7b-4c13-80f8-c3cc9abcfd13"",
+                    ""path"": ""<XRController>/trigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""XR"",
+                    ""action"": ""Sprint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d063b35d-a131-4f1d-95d2-034ef4b626a8"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""298f410c-d8b0-4f46-b111-214e1a806b22"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""514dcd31-2358-40d3-806a-71889382f2d5"",
+                    ""path"": ""<XRController>/secondaryButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""XR"",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d6a8e1ee-fee9-4f6e-8f5d-39a4a47b00a1"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""971bc02e-cd5a-4a2c-b6cc-d21fe04968c8"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""06a55c95-3306-48b1-bf2e-7e0a243a7826"",
+                    ""path"": ""<XRController>/secondaryButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""XR"",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""11bcd6d5-10bd-4cbc-8526-0505afa49b32"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b2c721ff-064a-4ac0-81f7-17d3997005b9"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse;Touch"",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a69f4154-23c1-4af0-ae21-602d4e1e1a07"",
+                    ""path"": ""<Joystick>/{Hatswitch}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Joystick"",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -1601,14 +2319,30 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Controller_Jump = m_Controller.FindAction("Jump", throwIfNotFound: true);
         m_Controller_Shoot = m_Controller.FindAction("Shoot", throwIfNotFound: true);
         m_Controller_Sprint = m_Controller.FindAction("Sprint", throwIfNotFound: true);
-        // InvertedController
-        m_InvertedController = asset.FindActionMap("InvertedController", throwIfNotFound: true);
-        m_InvertedController_Move = m_InvertedController.FindAction("Move", throwIfNotFound: true);
-        m_InvertedController_Interact = m_InvertedController.FindAction("Interact", throwIfNotFound: true);
-        m_InvertedController_Look = m_InvertedController.FindAction("Look", throwIfNotFound: true);
-        m_InvertedController_Jump = m_InvertedController.FindAction("Jump", throwIfNotFound: true);
-        m_InvertedController_Shoot = m_InvertedController.FindAction("Shoot", throwIfNotFound: true);
-        m_InvertedController_Sprint = m_InvertedController.FindAction("Sprint", throwIfNotFound: true);
+        // Shuffle1
+        m_Shuffle1 = asset.FindActionMap("Shuffle1", throwIfNotFound: true);
+        m_Shuffle1_Move = m_Shuffle1.FindAction("Move", throwIfNotFound: true);
+        m_Shuffle1_Interact = m_Shuffle1.FindAction("Interact", throwIfNotFound: true);
+        m_Shuffle1_Look = m_Shuffle1.FindAction("Look", throwIfNotFound: true);
+        m_Shuffle1_Jump = m_Shuffle1.FindAction("Jump", throwIfNotFound: true);
+        m_Shuffle1_Shoot = m_Shuffle1.FindAction("Shoot", throwIfNotFound: true);
+        m_Shuffle1_Sprint = m_Shuffle1.FindAction("Sprint", throwIfNotFound: true);
+        // Shuffle2
+        m_Shuffle2 = asset.FindActionMap("Shuffle2", throwIfNotFound: true);
+        m_Shuffle2_Move = m_Shuffle2.FindAction("Move", throwIfNotFound: true);
+        m_Shuffle2_Interact = m_Shuffle2.FindAction("Interact", throwIfNotFound: true);
+        m_Shuffle2_Look = m_Shuffle2.FindAction("Look", throwIfNotFound: true);
+        m_Shuffle2_Jump = m_Shuffle2.FindAction("Jump", throwIfNotFound: true);
+        m_Shuffle2_Shoot = m_Shuffle2.FindAction("Shoot", throwIfNotFound: true);
+        m_Shuffle2_Sprint = m_Shuffle2.FindAction("Sprint", throwIfNotFound: true);
+        // Shuffle3
+        m_Shuffle3 = asset.FindActionMap("Shuffle3", throwIfNotFound: true);
+        m_Shuffle3_Move = m_Shuffle3.FindAction("Move", throwIfNotFound: true);
+        m_Shuffle3_Interact = m_Shuffle3.FindAction("Interact", throwIfNotFound: true);
+        m_Shuffle3_Look = m_Shuffle3.FindAction("Look", throwIfNotFound: true);
+        m_Shuffle3_Jump = m_Shuffle3.FindAction("Jump", throwIfNotFound: true);
+        m_Shuffle3_Shoot = m_Shuffle3.FindAction("Shoot", throwIfNotFound: true);
+        m_Shuffle3_Sprint = m_Shuffle3.FindAction("Sprint", throwIfNotFound: true);
     }
 
     ~@InputSystem_Actions()
@@ -1616,7 +2350,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, InputSystem_Actions.UI.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_Exemples.enabled, "This will cause a leak and performance issues, InputSystem_Actions.Exemples.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_Controller.enabled, "This will cause a leak and performance issues, InputSystem_Actions.Controller.Disable() has not been called.");
-        UnityEngine.Debug.Assert(!m_InvertedController.enabled, "This will cause a leak and performance issues, InputSystem_Actions.InvertedController.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Shuffle1.enabled, "This will cause a leak and performance issues, InputSystem_Actions.Shuffle1.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Shuffle2.enabled, "This will cause a leak and performance issues, InputSystem_Actions.Shuffle2.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Shuffle3.enabled, "This will cause a leak and performance issues, InputSystem_Actions.Shuffle3.Disable() has not been called.");
     }
 
     /// <summary>
@@ -2142,54 +2878,54 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     /// </summary>
     public ControllerActions @Controller => new ControllerActions(this);
 
-    // InvertedController
-    private readonly InputActionMap m_InvertedController;
-    private List<IInvertedControllerActions> m_InvertedControllerActionsCallbackInterfaces = new List<IInvertedControllerActions>();
-    private readonly InputAction m_InvertedController_Move;
-    private readonly InputAction m_InvertedController_Interact;
-    private readonly InputAction m_InvertedController_Look;
-    private readonly InputAction m_InvertedController_Jump;
-    private readonly InputAction m_InvertedController_Shoot;
-    private readonly InputAction m_InvertedController_Sprint;
+    // Shuffle1
+    private readonly InputActionMap m_Shuffle1;
+    private List<IShuffle1Actions> m_Shuffle1ActionsCallbackInterfaces = new List<IShuffle1Actions>();
+    private readonly InputAction m_Shuffle1_Move;
+    private readonly InputAction m_Shuffle1_Interact;
+    private readonly InputAction m_Shuffle1_Look;
+    private readonly InputAction m_Shuffle1_Jump;
+    private readonly InputAction m_Shuffle1_Shoot;
+    private readonly InputAction m_Shuffle1_Sprint;
     /// <summary>
-    /// Provides access to input actions defined in input action map "InvertedController".
+    /// Provides access to input actions defined in input action map "Shuffle1".
     /// </summary>
-    public struct InvertedControllerActions
+    public struct Shuffle1Actions
     {
         private @InputSystem_Actions m_Wrapper;
 
         /// <summary>
         /// Construct a new instance of the input action map wrapper class.
         /// </summary>
-        public InvertedControllerActions(@InputSystem_Actions wrapper) { m_Wrapper = wrapper; }
+        public Shuffle1Actions(@InputSystem_Actions wrapper) { m_Wrapper = wrapper; }
         /// <summary>
-        /// Provides access to the underlying input action "InvertedController/Move".
+        /// Provides access to the underlying input action "Shuffle1/Move".
         /// </summary>
-        public InputAction @Move => m_Wrapper.m_InvertedController_Move;
+        public InputAction @Move => m_Wrapper.m_Shuffle1_Move;
         /// <summary>
-        /// Provides access to the underlying input action "InvertedController/Interact".
+        /// Provides access to the underlying input action "Shuffle1/Interact".
         /// </summary>
-        public InputAction @Interact => m_Wrapper.m_InvertedController_Interact;
+        public InputAction @Interact => m_Wrapper.m_Shuffle1_Interact;
         /// <summary>
-        /// Provides access to the underlying input action "InvertedController/Look".
+        /// Provides access to the underlying input action "Shuffle1/Look".
         /// </summary>
-        public InputAction @Look => m_Wrapper.m_InvertedController_Look;
+        public InputAction @Look => m_Wrapper.m_Shuffle1_Look;
         /// <summary>
-        /// Provides access to the underlying input action "InvertedController/Jump".
+        /// Provides access to the underlying input action "Shuffle1/Jump".
         /// </summary>
-        public InputAction @Jump => m_Wrapper.m_InvertedController_Jump;
+        public InputAction @Jump => m_Wrapper.m_Shuffle1_Jump;
         /// <summary>
-        /// Provides access to the underlying input action "InvertedController/Shoot".
+        /// Provides access to the underlying input action "Shuffle1/Shoot".
         /// </summary>
-        public InputAction @Shoot => m_Wrapper.m_InvertedController_Shoot;
+        public InputAction @Shoot => m_Wrapper.m_Shuffle1_Shoot;
         /// <summary>
-        /// Provides access to the underlying input action "InvertedController/Sprint".
+        /// Provides access to the underlying input action "Shuffle1/Sprint".
         /// </summary>
-        public InputAction @Sprint => m_Wrapper.m_InvertedController_Sprint;
+        public InputAction @Sprint => m_Wrapper.m_Shuffle1_Sprint;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
-        public InputActionMap Get() { return m_Wrapper.m_InvertedController; }
+        public InputActionMap Get() { return m_Wrapper.m_Shuffle1; }
         /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
         public void Enable() { Get().Enable(); }
         /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
@@ -2197,9 +2933,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
         public bool enabled => Get().enabled;
         /// <summary>
-        /// Implicitly converts an <see ref="InvertedControllerActions" /> to an <see ref="InputActionMap" /> instance.
+        /// Implicitly converts an <see ref="Shuffle1Actions" /> to an <see ref="InputActionMap" /> instance.
         /// </summary>
-        public static implicit operator InputActionMap(InvertedControllerActions set) { return set.Get(); }
+        public static implicit operator InputActionMap(Shuffle1Actions set) { return set.Get(); }
         /// <summary>
         /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
         /// </summary>
@@ -2207,11 +2943,11 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <remarks>
         /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
         /// </remarks>
-        /// <seealso cref="InvertedControllerActions" />
-        public void AddCallbacks(IInvertedControllerActions instance)
+        /// <seealso cref="Shuffle1Actions" />
+        public void AddCallbacks(IShuffle1Actions instance)
         {
-            if (instance == null || m_Wrapper.m_InvertedControllerActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_InvertedControllerActionsCallbackInterfaces.Add(instance);
+            if (instance == null || m_Wrapper.m_Shuffle1ActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_Shuffle1ActionsCallbackInterfaces.Add(instance);
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
@@ -2238,8 +2974,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <remarks>
         /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
         /// </remarks>
-        /// <seealso cref="InvertedControllerActions" />
-        private void UnregisterCallbacks(IInvertedControllerActions instance)
+        /// <seealso cref="Shuffle1Actions" />
+        private void UnregisterCallbacks(IShuffle1Actions instance)
         {
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
@@ -2262,12 +2998,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         }
 
         /// <summary>
-        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="InvertedControllerActions.UnregisterCallbacks(IInvertedControllerActions)" />.
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="Shuffle1Actions.UnregisterCallbacks(IShuffle1Actions)" />.
         /// </summary>
-        /// <seealso cref="InvertedControllerActions.UnregisterCallbacks(IInvertedControllerActions)" />
-        public void RemoveCallbacks(IInvertedControllerActions instance)
+        /// <seealso cref="Shuffle1Actions.UnregisterCallbacks(IShuffle1Actions)" />
+        public void RemoveCallbacks(IShuffle1Actions instance)
         {
-            if (m_Wrapper.m_InvertedControllerActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_Shuffle1ActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
@@ -2277,21 +3013,323 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <remarks>
         /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
         /// </remarks>
-        /// <seealso cref="InvertedControllerActions.AddCallbacks(IInvertedControllerActions)" />
-        /// <seealso cref="InvertedControllerActions.RemoveCallbacks(IInvertedControllerActions)" />
-        /// <seealso cref="InvertedControllerActions.UnregisterCallbacks(IInvertedControllerActions)" />
-        public void SetCallbacks(IInvertedControllerActions instance)
+        /// <seealso cref="Shuffle1Actions.AddCallbacks(IShuffle1Actions)" />
+        /// <seealso cref="Shuffle1Actions.RemoveCallbacks(IShuffle1Actions)" />
+        /// <seealso cref="Shuffle1Actions.UnregisterCallbacks(IShuffle1Actions)" />
+        public void SetCallbacks(IShuffle1Actions instance)
         {
-            foreach (var item in m_Wrapper.m_InvertedControllerActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_Shuffle1ActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_InvertedControllerActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_Shuffle1ActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
     /// <summary>
-    /// Provides a new <see cref="InvertedControllerActions" /> instance referencing this action map.
+    /// Provides a new <see cref="Shuffle1Actions" /> instance referencing this action map.
     /// </summary>
-    public InvertedControllerActions @InvertedController => new InvertedControllerActions(this);
+    public Shuffle1Actions @Shuffle1 => new Shuffle1Actions(this);
+
+    // Shuffle2
+    private readonly InputActionMap m_Shuffle2;
+    private List<IShuffle2Actions> m_Shuffle2ActionsCallbackInterfaces = new List<IShuffle2Actions>();
+    private readonly InputAction m_Shuffle2_Move;
+    private readonly InputAction m_Shuffle2_Interact;
+    private readonly InputAction m_Shuffle2_Look;
+    private readonly InputAction m_Shuffle2_Jump;
+    private readonly InputAction m_Shuffle2_Shoot;
+    private readonly InputAction m_Shuffle2_Sprint;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "Shuffle2".
+    /// </summary>
+    public struct Shuffle2Actions
+    {
+        private @InputSystem_Actions m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public Shuffle2Actions(@InputSystem_Actions wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "Shuffle2/Move".
+        /// </summary>
+        public InputAction @Move => m_Wrapper.m_Shuffle2_Move;
+        /// <summary>
+        /// Provides access to the underlying input action "Shuffle2/Interact".
+        /// </summary>
+        public InputAction @Interact => m_Wrapper.m_Shuffle2_Interact;
+        /// <summary>
+        /// Provides access to the underlying input action "Shuffle2/Look".
+        /// </summary>
+        public InputAction @Look => m_Wrapper.m_Shuffle2_Look;
+        /// <summary>
+        /// Provides access to the underlying input action "Shuffle2/Jump".
+        /// </summary>
+        public InputAction @Jump => m_Wrapper.m_Shuffle2_Jump;
+        /// <summary>
+        /// Provides access to the underlying input action "Shuffle2/Shoot".
+        /// </summary>
+        public InputAction @Shoot => m_Wrapper.m_Shuffle2_Shoot;
+        /// <summary>
+        /// Provides access to the underlying input action "Shuffle2/Sprint".
+        /// </summary>
+        public InputAction @Sprint => m_Wrapper.m_Shuffle2_Sprint;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_Shuffle2; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="Shuffle2Actions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(Shuffle2Actions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="Shuffle2Actions" />
+        public void AddCallbacks(IShuffle2Actions instance)
+        {
+            if (instance == null || m_Wrapper.m_Shuffle2ActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_Shuffle2ActionsCallbackInterfaces.Add(instance);
+            @Move.started += instance.OnMove;
+            @Move.performed += instance.OnMove;
+            @Move.canceled += instance.OnMove;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
+            @Look.started += instance.OnLook;
+            @Look.performed += instance.OnLook;
+            @Look.canceled += instance.OnLook;
+            @Jump.started += instance.OnJump;
+            @Jump.performed += instance.OnJump;
+            @Jump.canceled += instance.OnJump;
+            @Shoot.started += instance.OnShoot;
+            @Shoot.performed += instance.OnShoot;
+            @Shoot.canceled += instance.OnShoot;
+            @Sprint.started += instance.OnSprint;
+            @Sprint.performed += instance.OnSprint;
+            @Sprint.canceled += instance.OnSprint;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="Shuffle2Actions" />
+        private void UnregisterCallbacks(IShuffle2Actions instance)
+        {
+            @Move.started -= instance.OnMove;
+            @Move.performed -= instance.OnMove;
+            @Move.canceled -= instance.OnMove;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
+            @Look.started -= instance.OnLook;
+            @Look.performed -= instance.OnLook;
+            @Look.canceled -= instance.OnLook;
+            @Jump.started -= instance.OnJump;
+            @Jump.performed -= instance.OnJump;
+            @Jump.canceled -= instance.OnJump;
+            @Shoot.started -= instance.OnShoot;
+            @Shoot.performed -= instance.OnShoot;
+            @Shoot.canceled -= instance.OnShoot;
+            @Sprint.started -= instance.OnSprint;
+            @Sprint.performed -= instance.OnSprint;
+            @Sprint.canceled -= instance.OnSprint;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="Shuffle2Actions.UnregisterCallbacks(IShuffle2Actions)" />.
+        /// </summary>
+        /// <seealso cref="Shuffle2Actions.UnregisterCallbacks(IShuffle2Actions)" />
+        public void RemoveCallbacks(IShuffle2Actions instance)
+        {
+            if (m_Wrapper.m_Shuffle2ActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="Shuffle2Actions.AddCallbacks(IShuffle2Actions)" />
+        /// <seealso cref="Shuffle2Actions.RemoveCallbacks(IShuffle2Actions)" />
+        /// <seealso cref="Shuffle2Actions.UnregisterCallbacks(IShuffle2Actions)" />
+        public void SetCallbacks(IShuffle2Actions instance)
+        {
+            foreach (var item in m_Wrapper.m_Shuffle2ActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_Shuffle2ActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="Shuffle2Actions" /> instance referencing this action map.
+    /// </summary>
+    public Shuffle2Actions @Shuffle2 => new Shuffle2Actions(this);
+
+    // Shuffle3
+    private readonly InputActionMap m_Shuffle3;
+    private List<IShuffle3Actions> m_Shuffle3ActionsCallbackInterfaces = new List<IShuffle3Actions>();
+    private readonly InputAction m_Shuffle3_Move;
+    private readonly InputAction m_Shuffle3_Interact;
+    private readonly InputAction m_Shuffle3_Look;
+    private readonly InputAction m_Shuffle3_Jump;
+    private readonly InputAction m_Shuffle3_Shoot;
+    private readonly InputAction m_Shuffle3_Sprint;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "Shuffle3".
+    /// </summary>
+    public struct Shuffle3Actions
+    {
+        private @InputSystem_Actions m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public Shuffle3Actions(@InputSystem_Actions wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "Shuffle3/Move".
+        /// </summary>
+        public InputAction @Move => m_Wrapper.m_Shuffle3_Move;
+        /// <summary>
+        /// Provides access to the underlying input action "Shuffle3/Interact".
+        /// </summary>
+        public InputAction @Interact => m_Wrapper.m_Shuffle3_Interact;
+        /// <summary>
+        /// Provides access to the underlying input action "Shuffle3/Look".
+        /// </summary>
+        public InputAction @Look => m_Wrapper.m_Shuffle3_Look;
+        /// <summary>
+        /// Provides access to the underlying input action "Shuffle3/Jump".
+        /// </summary>
+        public InputAction @Jump => m_Wrapper.m_Shuffle3_Jump;
+        /// <summary>
+        /// Provides access to the underlying input action "Shuffle3/Shoot".
+        /// </summary>
+        public InputAction @Shoot => m_Wrapper.m_Shuffle3_Shoot;
+        /// <summary>
+        /// Provides access to the underlying input action "Shuffle3/Sprint".
+        /// </summary>
+        public InputAction @Sprint => m_Wrapper.m_Shuffle3_Sprint;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_Shuffle3; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="Shuffle3Actions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(Shuffle3Actions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="Shuffle3Actions" />
+        public void AddCallbacks(IShuffle3Actions instance)
+        {
+            if (instance == null || m_Wrapper.m_Shuffle3ActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_Shuffle3ActionsCallbackInterfaces.Add(instance);
+            @Move.started += instance.OnMove;
+            @Move.performed += instance.OnMove;
+            @Move.canceled += instance.OnMove;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
+            @Look.started += instance.OnLook;
+            @Look.performed += instance.OnLook;
+            @Look.canceled += instance.OnLook;
+            @Jump.started += instance.OnJump;
+            @Jump.performed += instance.OnJump;
+            @Jump.canceled += instance.OnJump;
+            @Shoot.started += instance.OnShoot;
+            @Shoot.performed += instance.OnShoot;
+            @Shoot.canceled += instance.OnShoot;
+            @Sprint.started += instance.OnSprint;
+            @Sprint.performed += instance.OnSprint;
+            @Sprint.canceled += instance.OnSprint;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="Shuffle3Actions" />
+        private void UnregisterCallbacks(IShuffle3Actions instance)
+        {
+            @Move.started -= instance.OnMove;
+            @Move.performed -= instance.OnMove;
+            @Move.canceled -= instance.OnMove;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
+            @Look.started -= instance.OnLook;
+            @Look.performed -= instance.OnLook;
+            @Look.canceled -= instance.OnLook;
+            @Jump.started -= instance.OnJump;
+            @Jump.performed -= instance.OnJump;
+            @Jump.canceled -= instance.OnJump;
+            @Shoot.started -= instance.OnShoot;
+            @Shoot.performed -= instance.OnShoot;
+            @Shoot.canceled -= instance.OnShoot;
+            @Sprint.started -= instance.OnSprint;
+            @Sprint.performed -= instance.OnSprint;
+            @Sprint.canceled -= instance.OnSprint;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="Shuffle3Actions.UnregisterCallbacks(IShuffle3Actions)" />.
+        /// </summary>
+        /// <seealso cref="Shuffle3Actions.UnregisterCallbacks(IShuffle3Actions)" />
+        public void RemoveCallbacks(IShuffle3Actions instance)
+        {
+            if (m_Wrapper.m_Shuffle3ActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="Shuffle3Actions.AddCallbacks(IShuffle3Actions)" />
+        /// <seealso cref="Shuffle3Actions.RemoveCallbacks(IShuffle3Actions)" />
+        /// <seealso cref="Shuffle3Actions.UnregisterCallbacks(IShuffle3Actions)" />
+        public void SetCallbacks(IShuffle3Actions instance)
+        {
+            foreach (var item in m_Wrapper.m_Shuffle3ActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_Shuffle3ActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="Shuffle3Actions" /> instance referencing this action map.
+    /// </summary>
+    public Shuffle3Actions @Shuffle3 => new Shuffle3Actions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     /// <summary>
     /// Provides access to the input control scheme.
@@ -2508,11 +3546,111 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         void OnSprint(InputAction.CallbackContext context);
     }
     /// <summary>
-    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "InvertedController" which allows adding and removing callbacks.
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Shuffle1" which allows adding and removing callbacks.
     /// </summary>
-    /// <seealso cref="InvertedControllerActions.AddCallbacks(IInvertedControllerActions)" />
-    /// <seealso cref="InvertedControllerActions.RemoveCallbacks(IInvertedControllerActions)" />
-    public interface IInvertedControllerActions
+    /// <seealso cref="Shuffle1Actions.AddCallbacks(IShuffle1Actions)" />
+    /// <seealso cref="Shuffle1Actions.RemoveCallbacks(IShuffle1Actions)" />
+    public interface IShuffle1Actions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "Move" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMove(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Interact" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnInteract(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Look" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnLook(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Jump" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnJump(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Shoot" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnShoot(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Sprint" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSprint(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Shuffle2" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="Shuffle2Actions.AddCallbacks(IShuffle2Actions)" />
+    /// <seealso cref="Shuffle2Actions.RemoveCallbacks(IShuffle2Actions)" />
+    public interface IShuffle2Actions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "Move" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMove(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Interact" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnInteract(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Look" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnLook(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Jump" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnJump(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Shoot" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnShoot(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Sprint" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSprint(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Shuffle3" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="Shuffle3Actions.AddCallbacks(IShuffle3Actions)" />
+    /// <seealso cref="Shuffle3Actions.RemoveCallbacks(IShuffle3Actions)" />
+    public interface IShuffle3Actions
     {
         /// <summary>
         /// Method invoked when associated input action "Move" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.

@@ -1,10 +1,12 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.Pool; // Nécessaire pour l'IObjectPool
+using UnityEngine.Pool;
 
 public class Projectile : MonoBehaviour
 {
-    [InlineEditor, SerializeField] private ProjectileStatsSO Stats;
+    [Title("Data")]
+    [InlineEditor, SerializeField]
+    private RSO_PlayerRuntimeStats runtimeStats;
 
     private Vector3 _currentDirection;
     private int _bounceCount;
@@ -40,7 +42,7 @@ public class Projectile : MonoBehaviour
     {
         _age += Time.deltaTime;
 
-        if (!CanHurtPlayer && _age >= Stats.PlayerGracePeriod)
+        if (!CanHurtPlayer && _age >= runtimeStats.baseProjectileStats.PlayerGracePeriod)
         {
             CanHurtPlayer = true;
             GetComponent<MeshRenderer>().material.color = Color.red;
@@ -49,25 +51,30 @@ public class Projectile : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float moveDistance = Stats.Speed * Time.deltaTime;
+        float moveDistance = runtimeStats.baseProjectileStats.Speed * Time.deltaTime;
         RaycastHit hit;
 
-        if (Physics.SphereCast(transform.position, Stats.CollisionRadius, _currentDirection, out hit, moveDistance, Stats.BounceMask))
+        if (Physics.SphereCast(transform.position, runtimeStats.baseProjectileStats.CollisionRadius, _currentDirection, out hit, moveDistance, runtimeStats.baseProjectileStats.BounceMask))
         {
             _bounceCount++;
 
-            if (_bounceCount > Stats.MaxBounces)
+            if (_bounceCount > runtimeStats.currentMaxBounces)
             {
                 _pool.Release(this);
                 return;
             }
 
             _currentDirection = Vector3.Reflect(_currentDirection, hit.normal);
-            transform.position = hit.point + (hit.normal * Stats.CollisionRadius);
+            transform.position = hit.point + (hit.normal * runtimeStats.baseProjectileStats.CollisionRadius);
         }
         else
         {
             transform.Translate(_currentDirection * moveDistance, Space.World);
         }
+    }
+
+    public void ReleaseToPool()
+    {
+        if (_pool != null) _pool.Release(this);
     }
 }

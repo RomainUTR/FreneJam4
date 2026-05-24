@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4387fa1d0e80fe940903872e19c006e7, type: 3}
+  m_Name: RSO_PlayerRuntimeStats
+  m_EditorClassIdentifier: Assembly-CSharp::RSO_PlayerRuntimeStats
+  basePlayerSettings: {fileID: 11400000, guid: ea976804a0f268b40b59205b9b88d674, type: 2}
+  baseWeaponProfile: {fileID: 11400000, guid: a7a6ff38e9de696489ea2ea2b48d538c, type: 2}
+  baseProjectileStats: {fileID: 11400000, guid: 7b172af91c0f4844fa566cc34e68abdd, type: 2}
+  currentRunSpeed: 10
+  currentMaxHealth: 7
+  currentFireRate: 0.1
+  currentDamage: 1
+  currentMaxBounces: 0

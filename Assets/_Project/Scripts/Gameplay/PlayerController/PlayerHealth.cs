@@ -4,7 +4,8 @@ using Sirenix.OdinInspector;
 public class PlayerHealth : MonoBehaviour
 {
     [Title("Data")]
-    [Required, InlineEditor] public PlayerSettingsSO Settings;
+    [Required, InlineEditor] public RSO_PlayerRuntimeStats runtimeStats;
+
     [Required] public RSE_OnPlayerDeath OnPlayerDeath;
     [Required] public RSE_OnDamakeTaken OnDamakeTaken;
     [Required] public RSE_OnHealthChanged OnHealthChanged;
@@ -26,6 +27,13 @@ public class PlayerHealth : MonoBehaviour
         OnHealPlayer.OnEventRaised -= HealPlayer;
     }
 
+    void Start()
+    {
+        _currentHealth = runtimeStats.currentMaxHealth;
+
+        OnHealthChanged?.RaiseEvent(_currentHealth);
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Projectile"))
@@ -38,15 +46,9 @@ public class PlayerHealth : MonoBehaviour
                 Instantiate(FX_OnPlayerHit, other.transform.position, Quaternion.identity);
                 OnDamakeTaken?.RaiseEvent(1.5f);
 
-                Destroy(other.gameObject);
+                ball.ReleaseToPool();
             }
         }
-    }
-
-
-    void Awake()
-    {
-        _currentHealth = Settings.maxHealth;
     }
 
     void TakeDamage(float amount)
@@ -56,17 +58,17 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log($"Player took {amount} damage. Current health: {_currentHealth}");
 
         if (_currentHealth <= 0)
-        {   
+        {
             OnPlayerDeath?.RaiseEvent();
         }
     }
 
     void HealPlayer(int amount)
     {
-        if (_currentHealth >= 0 && _currentHealth <= Settings.maxHealth)
+        if (_currentHealth >= 0 && _currentHealth <= runtimeStats.currentMaxHealth)
         {
             //AudioManager.Instance.PlayClipAt(HealSound, transform.position);
-            _currentHealth = Mathf.Min(_currentHealth + amount, Settings.maxHealth);
+            _currentHealth = Mathf.Min(_currentHealth + amount, runtimeStats.currentMaxHealth);
             OnHealthChanged?.RaiseEvent(_currentHealth);
         }
     }
