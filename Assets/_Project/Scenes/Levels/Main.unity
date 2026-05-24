@@ -132,13 +132,29 @@ PrefabInstance:
       value: SceneMusic
       objectReference: {fileID: 0}
     - target: {fileID: 1237968581498581447, guid: 7cf0d684b88ba6c44ae1c18fd3453901, type: 3}
+      propertyPath: MusicChange
+      value: 
+      objectReference: {fileID: 11400000, guid: 91fc88573fd31b740b558e73359681f7, type: 2}
+    - target: {fileID: 1237968581498581447, guid: 7cf0d684b88ba6c44ae1c18fd3453901, type: 3}
+      propertyPath: MusicLayers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1237968581498581447, guid: 7cf0d684b88ba6c44ae1c18fd3453901, type: 3}
       propertyPath: musicLayers.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1237968581498581447, guid: 7cf0d684b88ba6c44ae1c18fd3453901, type: 3}
+      propertyPath: MusicLayers.Array.data[0].music
+      value: 
+      objectReference: {fileID: 11400000, guid: 02fd12b7999924640847fcb4a304f042, type: 2}
+    - target: {fileID: 1237968581498581447, guid: 7cf0d684b88ba6c44ae1c18fd3453901, type: 3}
       propertyPath: musicLayers.Array.data[0].music
       value: 
       objectReference: {fileID: 11400000, guid: 321dc8eeb47324aa899f87ec292ab0eb, type: 2}
+    - target: {fileID: 1237968581498581447, guid: 7cf0d684b88ba6c44ae1c18fd3453901, type: 3}
+      propertyPath: MusicLayers.Array.data[0].localVolume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1237968581498581447, guid: 7cf0d684b88ba6c44ae1c18fd3453901, type: 3}
       propertyPath: musicLayers.Array.data[0].localVolume
       value: 1
@@ -2039,6 +2055,7 @@ GameObject:
   - component: {fileID: 957060846}
   - component: {fileID: 957060845}
   - component: {fileID: 957060844}
+  - component: {fileID: 957060847}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2120,6 +2137,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &957060847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957060843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!1 &1021431367
 GameObject:
   m_ObjectHideFlags: 0
@@ -4053,6 +4114,22 @@ PrefabInstance:
       propertyPath: musicSlider
       value: 
       objectReference: {fileID: 289527307}
+    - target: {fileID: 7824369666859028731, guid: ea1a7c6a69d4b44a1a30949b7f3ed9ef, type: 3}
+      propertyPath: MusicStop
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b52256e75f65a44da0576fb899c3c7b, type: 2}
+    - target: {fileID: 7824369666859028731, guid: ea1a7c6a69d4b44a1a30949b7f3ed9ef, type: 3}
+      propertyPath: MusicChange
+      value: 
+      objectReference: {fileID: 11400000, guid: 91fc88573fd31b740b558e73359681f7, type: 2}
+    - target: {fileID: 7824369666859028731, guid: ea1a7c6a69d4b44a1a30949b7f3ed9ef, type: 3}
+      propertyPath: PlayUISound
+      value: 
+      objectReference: {fileID: 11400000, guid: b0372a35497d98048b5f8a40567cb930, type: 2}
+    - target: {fileID: 7824369666859028731, guid: ea1a7c6a69d4b44a1a30949b7f3ed9ef, type: 3}
+      propertyPath: PlaySFXSound
+      value: 
+      objectReference: {fileID: 11400000, guid: 7176d16f71a6e844aa780ab38cfd9adb, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

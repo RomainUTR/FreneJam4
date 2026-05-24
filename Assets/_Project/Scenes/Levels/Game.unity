@@ -4127,7 +4127,7 @@ MonoBehaviour:
           m_RotationOrder: 4
         RemapColorZero: 0
         RemapColorOne: 1
-        TargetColor: {r: 0, g: 0, b: 0, a: 1}
+        TargetColor: {r: 0, g: 0, b: 0, a: 0.7176471}
 --- !u!4 &839539034
 Transform:
   m_ObjectHideFlags: 0
