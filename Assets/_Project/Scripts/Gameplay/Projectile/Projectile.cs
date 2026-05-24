@@ -7,6 +7,8 @@ public class Projectile : MonoBehaviour
     [Title("Data")]
     [InlineEditor, SerializeField]
     private RSO_PlayerRuntimeStats runtimeStats;
+    public RSE_PlaySFXSound PlaySFXSound;
+    public SoundData BounceSound;
 
     private Vector3 _currentDirection;
     private int _bounceCount;
@@ -57,6 +59,7 @@ public class Projectile : MonoBehaviour
         if (Physics.SphereCast(transform.position, runtimeStats.baseProjectileStats.CollisionRadius, _currentDirection, out hit, moveDistance, runtimeStats.baseProjectileStats.BounceMask))
         {
             _bounceCount++;
+            PlaySFXSound?.RaiseEvent(BounceSound, transform.position);
 
             if (_bounceCount > runtimeStats.currentMaxBounces)
             {

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3566eaf0097dead419957998084e0ccc, type: 3}
   m_Name: SSO_Wave 2
   m_EditorClassIdentifier: Assembly-CSharp::SSO_Wave
-  timeBetweenSpawns: 2
+  timeBetweenSpawns: 1.75
   enemiesToSpawn:
   - enemyPrefab: {fileID: 2577773722941642293, guid: 2595dac59e2784413ba951e7e665b715, type: 3}
-    count: 25
-  nextWaveHealthScaling: 0.1
-  nextWaveDamageScaling: 0.1
+    count: 27
+  nextWaveHealthScaling: 0.2
+  nextWaveDamageScaling: 0.15

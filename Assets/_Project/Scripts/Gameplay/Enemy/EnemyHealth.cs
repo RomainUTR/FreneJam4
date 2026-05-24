@@ -20,7 +20,7 @@ public class EnemyHealth : MonoBehaviour
     void Awake()
     {
         _currentHealth = enemySO.BaseHealth * enemyScaling.healthMultiplier;
-        HPText.text = _currentHealth.ToString();
+        HPText.text = _currentHealth.ToString("F1");
     }
 
     void OnEnable()
@@ -38,7 +38,7 @@ public class EnemyHealth : MonoBehaviour
         if (GO != this.gameObject) return;
 
         _currentHealth -= amount;
-        HPText.text = _currentHealth.ToString();
+        HPText.text = _currentHealth.ToString("F1");
 
         if (_currentHealth <= 0f)
         {

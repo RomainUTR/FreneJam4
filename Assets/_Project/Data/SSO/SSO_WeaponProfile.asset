@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SSO_WeaponProfile
   m_EditorClassIdentifier: Assembly-CSharp::SSO_WeaponProfile
   fireRate: 0.1
-  spreadAngle: 20
+  spreadAngle: 12.5
   heatPerShot: 0.07
   coolingRate: 0.25
   projectilePrefab: {fileID: 8778667683677493124, guid: 2970f256f4dad8a48b17b82a81f17ae2, type: 3}

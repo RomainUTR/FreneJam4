@@ -45,4 +45,23 @@ public class RSO_PlayerRuntimeStats : ScriptableObject
     {
         currentRunSpeed += currentRunSpeed * percentage;
     }
+
+    public void ImproveFireRate(float percentage)
+    {
+        float reduction = currentFireRate * percentage;
+        currentFireRate -= reduction;
+
+        currentFireRate = Mathf.Max(0.05f, currentFireRate); // Ne pas descendre en dessous de 0.05
+    }
+
+    public void AddFlatHealth(int amount)
+    {
+        currentMaxHealth += amount;
+    }
+
+    public void MultiplyMaxHealth(float percentage)
+    {
+        int bonusHealth = Mathf.RoundToInt(currentMaxHealth * percentage);
+        currentMaxHealth += bonusHealth;
+    }
 }

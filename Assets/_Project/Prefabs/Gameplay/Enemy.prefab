@@ -60,6 +60,7 @@ MonoBehaviour:
   EnemyTakeDamage: {fileID: 11400000, guid: 7626776811bd541079c241992545635b, type: 2}
   projectileStats: {fileID: 11400000, guid: 7b172af91c0f4844fa566cc34e68abdd, type: 2}
   playerSettings: {fileID: 11400000, guid: ea976804a0f268b40b59205b9b88d674, type: 2}
+  runtimeStats: {fileID: 11400000, guid: b4e5ba22da7ac614d8ac815182750a2c, type: 2}
   PlayerTarget: {fileID: 0}
 --- !u!114 &8887282523099157180
 MonoBehaviour:

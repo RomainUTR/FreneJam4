@@ -15,6 +15,6 @@ MonoBehaviour:
   timeBetweenSpawns: 2
   enemiesToSpawn:
   - enemyPrefab: {fileID: 2577773722941642293, guid: 2595dac59e2784413ba951e7e665b715, type: 3}
-    count: 25
-  nextWaveHealthScaling: 0.1
-  nextWaveDamageScaling: 0.1
+    count: 20
+  nextWaveHealthScaling: 0.2
+  nextWaveDamageScaling: 0.2

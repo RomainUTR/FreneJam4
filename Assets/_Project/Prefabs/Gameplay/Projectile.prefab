@@ -50,6 +50,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   runtimeStats: {fileID: 11400000, guid: b4e5ba22da7ac614d8ac815182750a2c, type: 2}
+  PlaySFXSound: {fileID: 11400000, guid: 7176d16f71a6e844aa780ab38cfd9adb, type: 2}
+  BounceSound: {fileID: 11400000, guid: 550cfa7a8e84f4040b960c5eda21672d, type: 2}
 --- !u!33 &2729572566704626572
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -15,6 +15,8 @@ public class WaveManager : MonoBehaviour
     [Required] public RSO_EnemyScaling enemyScaling;
     [Required] public RSE_OnEnemyKilled OnEnemyKilled;
     [Required] public RSE_OnWaveCleared OnWaveCleared;
+    [Required] public RSE_OnUpgradeFinished OnUpgradeFinished;
+    [Required] public RSE_OnVictory OnVictory;
 
     [Title("Debug")]
     public TMP_Text ActiveMobCount, CurrentWaveIndex;
@@ -27,11 +29,13 @@ public class WaveManager : MonoBehaviour
     private void OnEnable()
     {
         OnEnemyKilled.OnEventRaised += HandleEnemyDeath;
+        OnUpgradeFinished.OnEventRaised += StartNextWave;
     }
 
     private void OnDisable()
     {
         OnEnemyKilled.OnEventRaised -= HandleEnemyDeath;
+        OnUpgradeFinished.OnEventRaised -= StartNextWave;
     }
 
     private void Start()
@@ -86,6 +90,13 @@ public class WaveManager : MonoBehaviour
     {
         if (!_isSpawning && _activeEnemiesCount <= 0)
         {
+            if (_currentWaveIndex >= waves.Count -1)
+            {
+                Debug.Log("Toutes les vagues sont terminées ! VICTOIRE !");
+                OnVictory?.RaiseEvent();
+                return;
+            }
+
             SSO_Wave completedWave = waves[_currentWaveIndex];
 
             enemyScaling.AddHealthScaling(completedWave.nextWaveHealthScaling);

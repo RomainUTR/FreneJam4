@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 025f477918090324eb7cc22721fda7d0, type: 3}
+  m_Name: SSO_Upgrade_FireRate
+  m_EditorClassIdentifier: Assembly-CSharp::SSO_Upgrade_FireRate
+  upgradeName: Improve Fire Rate
+  description: Improve your fire rate by 20 percents
+  icon: {fileID: 21300000, guid: 31c6f9c4fd82b474a91cd803445972e2, type: 3}
+  playerStats: {fileID: 11400000, guid: b4e5ba22da7ac614d8ac815182750a2c, type: 2}
+  GainFireRate: 0.2

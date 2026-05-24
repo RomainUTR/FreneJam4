@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de417e438180b0548ab6c8e5b6f66b95, type: 3}
+  m_Name: Shoot
+  m_EditorClassIdentifier: Assembly-CSharp::SoundData
+  volumeMultiplier: 1
+  pitch: 1
+  spatialBlend: 1
+  clips:
+  - {fileID: 8300000, guid: c38f0664f6d4cd643971abbf96c81434, type: 3}
+  - {fileID: 8300000, guid: 98416b0ba4fa2aa41b81436fbae246fc, type: 3}
+  - {fileID: 8300000, guid: 792969756b0fdb14bbecfbd40269260b, type: 3}
+  - {fileID: 8300000, guid: 14582c65f699a104cb0e4d0736b0ab70, type: 3}
+  - {fileID: 8300000, guid: 25453f50b879f9c4294917db82af623a, type: 3}
+  - {fileID: 8300000, guid: fd2a36996331538488d0e23e06f059e0, type: 3}
+  - {fileID: 8300000, guid: 03d4f970bd2b37d49add2821cbdad7fc, type: 3}
+  - {fileID: 8300000, guid: c208faf291280f04b91334c26cd3e354, type: 3}
+  - {fileID: 8300000, guid: 9a0f03f4efbadce46bfa1e00cb526325, type: 3}
+  - {fileID: 8300000, guid: 3a3f9fb14732efc46a59812d524003e7, type: 3}
+  - {fileID: 8300000, guid: e836f3523681ca14e8db8439fb8b71b1, type: 3}
+  - {fileID: 8300000, guid: 5587691acacf0cd458f50d577a321c45, type: 3}
+  - {fileID: 8300000, guid: a8e9178e965660a458ab09985b253c2d, type: 3}

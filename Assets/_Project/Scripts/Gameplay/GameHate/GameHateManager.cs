@@ -1,3 +1,4 @@
+using MoreMountains.Feedbacks;
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ public class GameHateManager : MonoBehaviour
     [Required, SerializeField] private List<RSF_BaseMalus> MalusPool = new List<RSF_BaseMalus>();
 
     public RSE_AskForPunishment AskForPunishment;
+    public MMF_Player MalusFeedback;
 
     [Title("Settings")]
     [SerializeField] private float timeBetweenPunishments = 10f;
@@ -61,6 +63,7 @@ public class GameHateManager : MonoBehaviour
                 temporaryPool.RemoveAt(randomIndex);
             }
 
+            MalusFeedback.PlayFeedbacks();
             Debug.Log(selectedMalus.name);
         }
 

@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     public RSE_EnemyTakeDamage EnemyTakeDamage;
     public ProjectileStatsSO projectileStats;
     public PlayerSettingsSO playerSettings;
+    public RSO_PlayerRuntimeStats runtimeStats;
 
     public Transform PlayerTarget;
 
@@ -53,7 +54,7 @@ public class Enemy : MonoBehaviour
         {
             Instantiate(FX_OnHit, transform.position, Quaternion.identity);
 
-            EnemyTakeDamage.RaiseEvent(this.gameObject, projectileStats.damage);
+            EnemyTakeDamage.RaiseEvent(this.gameObject, projectileStats.damage * runtimeStats.currentDamage);
         } else if (other.CompareTag("Player")) // Si le player prend des dégats par l'ennemi
         {
             Instantiate(FX_OnPlayerHit, other.transform.position, Quaternion.identity);
